@@ -1,0 +1,47 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+ul{
+    li{
+        display:inline-block;
+        list-style:none;
+    }
+}
+
+body{
+    padding:20px;
+}
+
+a{
+    text-decoration:none;
+    color:#000;
+}
+
+h1{
+    margin-bottom:50px;
+}
+
+.tab-btn{
+    border:1px solid #ccc;
+    width:100px;
+    text-align:center;
+    display:inline-block;
+    font-size:12px;
+
+    &:hover{
+        background:#ffa351;
+    }
+}
+
+.tab-con{
+    margin-top:20px;
+    display:none;
+    border:1px dashed #ccc;
+    height:100px;
+
+    &.active{
+        display:block;
+    }
+}
