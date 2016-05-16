@@ -142,7 +142,6 @@ juyoung = (function ($, helper){
 
 		return {
 			open: open,
-			test:asdfkjsdf,jdflajd                  
 			close: close
 		};
 	}
