@@ -43,10 +43,56 @@ juyoung.common = (function ($){
 		}
 	}
 
+	/*
+	*	Layer popup
+	*/
+	function layerPopup(){
+		var layerSection = $('#layer-section');
+		if(layerSection.length < 1){
+			return;
+		}
+		var layerDataStore = {};
+		function addData(html) {
+			layerDataStore['#' + html.attr('id')] = html;
+		}
+
+		layerSection.find('.layer').each(function(){
+			addData($(this));
+			$(this).remove();
+		});
+		
+		function showLayer(e, layerID){
+			var showID;
+
+			if(e){
+				e.preventDefault();
+				showID = juyoung.helper.getBtnTarget(e.target);
+			}else{
+				showID = layerID;
+			}
+		}
+		
+		function hideLayer() {
+			
+		}
+
+		return{
+			open : open,
+			close : close
+		};
+
+		$(document).on('click.juyoung.layerPopup','[data-layer-open]', showLayer);
+		$(document).on('click.juyoung.layerPopup','.btn-layer-close', hideLayer);
+	}
+
+
+
+
 	return {
-		windowPopup: windowPopupF()
+		windowPopup: windowPopupF(),
+		layerPopup : layerPopup()
 	}
 
 }(window.jQuery));
 
-console.log(juyoung);
+// console.log(juyoung);

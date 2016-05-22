@@ -94,10 +94,14 @@ juyoung = (function ($, helper){
 	 * layer popup
 	 */
 	function layerPopup(){
-		var layerSection = $('#layer-section');
+		var layerSection = $('#layer-section'),
+			openHistory = new juyoungj.helper.Stack(),
+			openList = new juyoung.helper.List();
+
 		if(layerSection.length < 1){
 			return;
 		}
+
 		var layerDataStore = {};
 
 		function addData(html){
@@ -129,10 +133,24 @@ juyoung = (function ($, helper){
 
 			layerSection.append(layerDataStore[showId]);
 			$(layerDataStore[showId]).addClass('on').focus();
+
+			openList.add(showId);//열린레이어
+			openHistory.add($(e.target));//클릭한버튼
 		}
-		function hideLayer(e, hideId){
+
+		function hideLayer(e, hideID){
+			hideID = hideId || "#"+$(this).parent().attr('id');
+
+			if(e){
+				e.preventDefault();
+				openHistory.get().focus();//뽑은거에 포커스
+			}
+
+			openList.remove(hideID);
+			$(hideID).remove();
 
 		}
+
 		function initOpen(){//자동열리는거
 
 		}
