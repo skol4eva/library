@@ -14,7 +14,7 @@ Encoding.default_external = "utf-8"
 http_path = "/"
 css_dir = "css"
 sass_dir = "config/sass"
-images_path = "../images"
+images_path = "images"
 images_dir = "images"
 javascripts_dir = "js"
 
@@ -23,10 +23,10 @@ javascripts_dir = "js"
 output_style = (environment == :production) ? :compressed : :expanded
 
 # To enable relative paths to assets via compass helper functions. Uncomment:
-relative_assets = false
+relative_assets = true
 
 # To disable debugging comments that display the original location of your selectors. Uncomment:
-line_comments = true
+line_comments = false
 
 
 # If you prefer the indented syntax, you might want to regenerate this

@@ -1,6 +1,64 @@
-/* line 1, ../config/sass/_index.scss */
+.spr-sprite, .spr-bg_go, .spr-bg_secition, .spr-bg_share_facebook, .spr-bg_share_googleplus, .spr-bg_share_twitter, .demo .ico-01, .demo .ico-02, .demo .ico-03, .demo .ico-04, .demo .ico-05 {
+  background-image: url('../images/spr-s53bfc456b2.png');
+  background-repeat: no-repeat;
+}
+
+.spr-bg_go {
+  background-position: 0 0;
+}
+
+.spr-bg_secition {
+  background-position: 0 -59px;
+}
+
+.spr-bg_share_facebook {
+  background-position: 0 -187px;
+}
+
+.spr-bg_share_googleplus {
+  background-position: 0 -317px;
+}
+
+.spr-bg_share_twitter {
+  background-position: 0 -447px;
+}
+
 ul {
-  background: url("bg_header.jpg");
+  background: url("../images/bg_header.jpg");
+}
+ul li {
+  height: 50px;
+}
+
+.demo .ico-01 {
+  background-position: 0 0;
+  width: 59px;
+  height: 59px;
+}
+.demo .ico-02 {
+  background-position: 0 -59px;
+}
+.demo .ico-03 {
+  background-position: 0 -187px;
+}
+.demo .ico-04 {
+  background-position: 0 -317px;
+}
+.demo .ico-05 {
+  background-position: 0 -447px;
+}
+
+#layer-01 {
+  display: none;
+  background-color: #fff;
+  width: 100px;
+  height: 100px;
+}
+
+.layerClose {
+  width: 10px;
+  height: 10px;
+  background-color: red;
 }
 
 /*# sourceMappingURL=style.css.map */

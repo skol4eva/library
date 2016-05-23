@@ -1,3 +1,36 @@
+$imgFolder : "../images/";
+
+@import "compass/utilities/sprites";
+@import "spr/*.png";
+@include all-spr-sprites;
+
 ul{
-  background: url('bg_header.jpg');
+  background: url($imgFolder + 'bg_header.jpg');
+  li{
+    height:50px;
+  }
+}
+
+.demo{
+  .ico-01{
+    @include spr-sprite(bg_go);
+    width: spr-sprite-width(bg_go);
+    height:spr-sprite-height(bg_go);
+  }
+  .ico-02{@include spr-sprite(bg_secition);}
+  .ico-03{@include spr-sprite(bg_share_facebook);}
+  .ico-04{@include spr-sprite(bg_share_googleplus);}
+  .ico-05{@include spr-sprite(bg_share_twitter);}
+}
+
+#layer-01{
+  display: none;
+  background-color: #fff;
+  width:100px;
+  height:100px;
+}
+.layerClose{
+  width:10px;
+  height:10px;
+  background-color: red;
 }
