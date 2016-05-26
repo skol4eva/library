@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
@@ -50,31 +50,8 @@
 <!-- Bootstrap JS -->
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <!-- My JS(직접 작성한 js) -->
-<!--<script type="text/javascript" src="js/common.js"></script>-->
 <script type="text/javascript" src="js/modalpopup.min.js"></script>
-<script>
-	(function($){
-		'use strict';
-		//modal layer
-		var hash,
-				dialog;
-		$('.openLayer').on('click', function(e) {
-			hash = this.hash,
-			dialog = new ui.Modal({
-				isAutoButton: true,
-				isBackdropClickClose: true,
-				isEsc: true,
-				backdropCss: {'opacity' : '0.8'},
-				content: $(hash)
-			});
-			dialog.show();
-			e.preventDefault();
-		});
-		$('.close').on('click', function(e) {
-			dialog.hide();
-			e.preventDefault();
-		});
-	})(jQuery);
-</script>
+<script type="text/javascript" src="js/common.js"></script>
+
 </body>
 </html>
