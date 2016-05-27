@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- 위 3개의 메타 태그는 반드시 head 태그 처음에 와야한다. 어떤 다른 콘텐츠들은 반드시 이 태그들 다음에 와야한다. -->
+	<title>Basic Template</title>
+
+	<!-- My CSS(직접 작성한 css) -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- SyntaxHighlighter JS,CSS -->
+	<script type="text/javascript" src="syntaxhighlighter_3.0.83/scripts/shCore.js"></script>
+	<script type="text/javascript" src="syntaxhighlighter_3.0.83/scripts/shBrushJScript.js"></script>
+	<script type="text/javascript" src="syntaxhighlighter_3.0.83/scripts/shBrushXml.js"></script>
+	<script type="text/javascript" src="syntaxhighlighter_3.0.83/scripts/shBrushCss.js"></script>
+	<script type="text/javascript" src="syntaxhighlighter_3.0.83/scripts/shBrushRuby.js"></script>
+	<link type="text/css" rel="stylesheet" href="syntaxhighlighter_3.0.83/styles/shCoreDefault.css"/>
+	<link type="text/css" rel="stylesheet" href="syntaxhighlighter_3.0.83/styles/shThemeMidnight.css">
+	<script type="text/javascript">
+		SyntaxHighlighter.all();
+	</script>
+
+	<!-- IE8 에서 HTML5 요소와 미디어쿼리를 위한 HTML5 shiv 와 Respond.js  -->
+	<!--[if lt IE 9]>
+	<script type="text/javascript" src="js/IE9.js"></script>
+	<script type="text/javascript" src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script type="text/javascript" src="http://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+</head>
+<body Onload="dp.SyntaxHighlighter.HighlightAll('code');">
+
+<h1>Hello SyntaxHighlighter</h1>
+
+<pre class="brush:js;">
+	var UserAgent = navigator.userAgent;
+
+    if (UserAgent.match(/iPhone|iPod|Android|Windows CE|BlackBerry|Symbian|Windows Phone|webOS|Opera Mini|Opera Mobi|POLARIS|IEMobile|lgtelecom|nokia|SonyEricsson/i) != null || UserAgent.match(/LG|SAMSUNG|Samsung/) != null){
+        // location.href = "/mobile/index.html";
+        console.log(UserAgent);
+        console.log("Mobile");
+        $("body").addClass("mobile");
+
+    }else{
+        console.log(UserAgent);
+        console.log("Web");
+        $("body").addClass("pc");
+    }
+
+    var $body = $('body');
+    if (navigator.userAgent.toLowerCase().indexOf('MSIE 8.0') != -1){
+        $body.addClass('ie8');
+    };
+</pre>
+
+<pre class="brush: html;">
+<ul class="demo">
+	<li class="ico-01"></li>
+	<li class="ico-02"></li>
+	<li class="ico-03"></li>
+	<li class="ico-04"></li>
+	<li class="ico-05"></li>
+</ul>
+</pre>
+
+
+<pre class="brush:css;">
+	.demo .ico-01 {
+		background-position: 0 0;
+		width: 59px;
+		height: 59px;
+	}
+	.demo .ico-02 {
+		background-position: 0 -59px;
+	}
+	.demo .ico-03 {
+		background-position: 0 -187px;
+	}
+	.demo .ico-04 {
+		background-position: 0 -317px;
+	}
+	.demo .ico-05 {
+		background-position: 0 -447px;
+	}
+</pre>
+
+
+
+
+<!-- jQuery(부트스트랩의 자바스크립트 플러그인을 위해 필요합니다.) -->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<!-- My JS(직접 작성한 js) -->
+<script type="text/javascript" src="js/modalpopup.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+
+</body>
+</html>
