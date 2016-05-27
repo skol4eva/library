@@ -1,0 +1,154 @@
+@charset "UTF-8";
+#header, #header .goHome, #header .goEvent, #footer, .section-01, .section-01 .btn-powerbook, .section-02, .section-03, .section-03 .btn-buy-01, .section-03 .btn-buy-02, .section-03 .btn-buy-03, .section-03 .btn-buy-04, .section-03 .btn-buy-05, .section-03 .btn-buy-06, .section-04, .section-04 .login-wrap .login-01 .btn-login, .section-04 .login-wrap .login-02 .btn-score, .section-04 .btn-coupon, .section-04 .btn-change-01, .section-04 .btn-change-02, .section-04 .btn-change-03, .section-04 .btn-change-04, .section-04 .btn-change-05, .section-04 .btn-change-06, .section-04 .btn-change-07, .section-04 .btn-change-08, .section-04 .btn-change-09, .section-04 .btn-change-10, .section-04 .btn-change-11, .section-04 .btn-change-12, .section-04 .btn-change-13, .section-04 .btn-change-14, .section-04 .btn-change-15, .section-04 .btn-change-16, .section-04 .btn-change-17, .section-04 .btn-change-18, .section-04 .btn-link-01, .section-04 .btn-link-02, .section-04 .btn-link-03, .section-04 .btn-link-04, .section-04 .btn-link-05, .section-04 .btn-link-06, .section-caution, #layer-01, #layer-01 + .layerClose, #layer-02, #layer-02 + .layerClose, #layer-03, #layer-03 + .layerClose, #layer-04, #layer-04 + .layerClose, #layer-05, #layer-05 + .layerClose, .quick-menu, .quick-menu .top { display: block; overflow: hidden; text-indent: -999em; text-align: left; }
+
+#header .goHome, #header .sns, #header .goEvent, #footer .sns, .section-01 .btn-powerbook, .section-03 .btn-buy-01, .section-03 .btn-buy-02, .section-03 .btn-buy-03, .section-03 .btn-buy-04, .section-03 .btn-buy-05, .section-03 .btn-buy-06, .section-04 .login-wrap, .section-04 .login-wrap .login-01 .btn-login, .section-04 .login-wrap .login-02 .btn-score, .section-04 .btn-coupon, .section-04 .btn-change-01, .section-04 .btn-change-02, .section-04 .btn-change-03, .section-04 .btn-change-04, .section-04 .btn-change-05, .section-04 .btn-change-06, .section-04 .btn-change-07, .section-04 .btn-change-08, .section-04 .btn-change-09, .section-04 .btn-change-10, .section-04 .btn-change-11, .section-04 .btn-change-12, .section-04 .btn-change-13, .section-04 .btn-change-14, .section-04 .btn-change-15, .section-04 .btn-change-16, .section-04 .btn-change-17, .section-04 .btn-change-18, .section-04 .btn-link-01, .section-04 .btn-link-02, .section-04 .btn-link-03, .section-04 .btn-link-04, .section-04 .btn-link-05, .section-04 .btn-link-06, #layer-01 .dialog-content .tab-wrap, #layer-01 + .layerClose, #layer-02 + .layerClose, #layer-03 + .layerClose, #layer-04 + .layerClose, #layer-05 + .layerClose, .quick-menu .top { position: absolute; left: 50%; }
+
+/* common setting */
+* { margin: 0; padding: 0; border: 0; }
+
+html, body { min-width: 1100px; }
+
+body { background: #fff; margin: 0; padding: 0; font-family: Malgun Gothic, "맑은 고딕", Dotum, "돋움", Hevetica, AppleGothic, Sans-serif; font-size: 12px; }
+
+/*.gnbContainer{
+	width:$minWidth - 30px !important;
+}*/
+img { border: 0; }
+
+ul, ol { list-style: none; }
+
+caption { font-size: 0; position: absolute; left: -99999px; }
+
+button { background-color: transparent; border: 0 none; cursor: pointer; outline: 0 none; }
+
+.ally { overflow: hidden; position: absolute; left: -999em; font-size: 0; height: 0; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+body { background-color: #0e1b5b; }
+
+/* header */
+#header { position: relative; background: url("http://static.plaync.co.kr/pr/aion/event/p2016/160518_jushin/bg_header.jpg") 50% 0 no-repeat; height: 634px; }
+#header h1, #header p { overflow: hidden; position: absolute; left: -999em; font-size: 0; height: 0; }
+#header .goHome { display: block; width: 80px; height: 31px; top: 17px; margin-left: -485px; z-index: 50; }
+#header .sns { top: 27px; margin-left: 284px; overflow: hidden; text-indent: 0; z-index: 50; }
+#header .sns a { float: left; margin-right: 0; }
+#header .goEvent { display: block; width: 90px; height: 29px; top: 27px; margin-left: 392px; z-index: 50; }
+
+/* footer */
+#footer { position: relative; background: url("http://static.plaync.co.kr/pr/aion/event/p2016/160518_jushin/bg_footer.jpg") 50% 0 no-repeat; height: 94px; }
+#footer .sns { top: 2px; margin-left: 100px; overflow: hidden; text-indent: 0; z-index: 50; }
+#footer .sns a { float: left; margin-right: 0; }
+
+/* contents */
+.section-01 { position: relative; background: url("http://static.plaync.co.kr/pr/aion/event/p2016/160518_jushin/bg_sec_01.jpg") 50% 0 no-repeat; height: 1049px; }
+.section-01 .btn-powerbook { display: block; width: 116px; height: 36px; top: 59px; margin-left: 305px; z-index: 10; }
+.section-02 { position: relative; background: url("http://static.plaync.co.kr/pr/aion/event/p2016/160518_jushin/bg_sec_02.jpg") 50% 0 no-repeat; height: 440px; }
+.section-03 { position: relative; background: url("http://static.plaync.co.kr/pr/aion/event/p2016/160518_jushin/bg_sec_03.jpg") 50% 0 no-repeat; height: 979px; }
+.section-03 .btn-buy-01 { display: block; width: 224px; height: 47px; top: 431px; margin-left: -407px; z-index: 10; }
+.section-03 .btn-buy-02 { display: block; width: 224px; height: 47px; top: 431px; margin-left: -110px; z-index: 10; }
+.section-03 .btn-buy-03 { display: block; width: 224px; height: 47px; top: 431px; margin-left: 185px; z-index: 10; }
+.section-03 .btn-buy-04 { display: block; width: 224px; height: 47px; top: 799px; margin-left: -407px; z-index: 10; }
+.section-03 .btn-buy-05 { display: block; width: 224px; height: 47px; top: 799px; margin-left: -110px; z-index: 10; }
+.section-03 .btn-buy-06 { display: block; width: 224px; height: 47px; top: 799px; margin-left: 185px; z-index: 10; }
+.section-04 { position: relative; background: url("http://static.plaync.co.kr/pr/aion/event/p2016/160518_jushin/bg_sec_04.jpg") 50% 0 no-repeat; height: 1552px; }
+.section-04 .login-wrap { top: 251px; margin-left: 11px; width: 434px; height: 146px; }
+.section-04 .login-wrap .login-01 { background: url("http://static.plaync.co.kr/pr/aion/event/p2016/160518_jushin/login-01.jpg") 0 0 no-repeat; height: 100%; }
+.section-04 .login-wrap .login-01 .btn-login { display: block; width: 118px; height: 79px; top: 36px; margin-left: 77px; z-index: 10; }
+.section-04 .login-wrap .login-02 { background: url("http://static.plaync.co.kr/pr/aion/event/p2016/160518_jushin/login-02.jpg") 0 0 no-repeat; height: 100%; }
+.section-04 .login-wrap .login-02 dl { text-indent: 0; font-size: 20px; }
+.section-04 .login-wrap .login-02 dl dt { color: #8cbff2; position: absolute; top: 45px; left: 20px; }
+.section-04 .login-wrap .login-02 dl dd span { display: inline-block; width: 70px; text-align: right; }
+.section-04 .login-wrap .login-02 dl .live { color: #d263e3; position: absolute; top: 45px; left: 120px; }
+.section-04 .login-wrap .login-02 dl .master { color: #51b7ff; position: absolute; top: 75px; left: 120px; }
+.section-04 .login-wrap .login-02 .btn-score { display: block; width: 118px; height: 79px; top: 36px; margin-left: 77px; z-index: 10; }
+.section-04 .login-wrap .login-03 { background: url("http://static.plaync.co.kr/pr/aion/event/p2016/160518_jushin/login-03.jpg") 0 0 no-repeat; height: 100%; }
+.section-04 .btn-coupon { display: block; width: 121px; height: 39px; top: 181px; margin-left: 303px; z-index: 10; }
+.section-04 .btn-change-01 { display: block; width: 54px; height: 29px; top: 721px; margin-left: -341px; z-index: 10; }
+.section-04 .btn-change-02 { display: block; width: 54px; height: 29px; top: 721px; margin-left: -188px; z-index: 10; }
+.section-04 .btn-change-03 { display: block; width: 54px; height: 29px; top: 721px; margin-left: -24px; z-index: 10; }
+.section-04 .btn-change-04 { display: block; width: 54px; height: 29px; top: 721px; margin-left: 135px; z-index: 10; }
+.section-04 .btn-change-05 { display: block; width: 54px; height: 29px; top: 721px; margin-left: 293px; z-index: 10; }
+.section-04 .btn-change-06 { display: block; width: 54px; height: 29px; top: 919px; margin-left: -341px; z-index: 10; }
+.section-04 .btn-change-07 { display: block; width: 54px; height: 29px; top: 919px; margin-left: -188px; z-index: 10; }
+.section-04 .btn-change-08 { display: block; width: 54px; height: 29px; top: 919px; margin-left: -24px; z-index: 10; }
+.section-04 .btn-change-09 { display: block; width: 54px; height: 29px; top: 919px; margin-left: 135px; z-index: 10; }
+.section-04 .btn-change-10 { display: block; width: 54px; height: 29px; top: 1167px; margin-left: -341px; z-index: 10; }
+.section-04 .btn-change-11 { display: block; width: 54px; height: 29px; top: 1167px; margin-left: -188px; z-index: 10; }
+.section-04 .btn-change-12 { display: block; width: 54px; height: 29px; top: 1167px; margin-left: -24px; z-index: 10; }
+.section-04 .btn-change-13 { display: block; width: 54px; height: 29px; top: 1167px; margin-left: 135px; z-index: 10; }
+.section-04 .btn-change-14 { display: block; width: 54px; height: 29px; top: 1167px; margin-left: 293px; z-index: 10; }
+.section-04 .btn-change-15 { display: block; width: 54px; height: 29px; top: 1365px; margin-left: -341px; z-index: 10; }
+.section-04 .btn-change-16 { display: block; width: 54px; height: 29px; top: 1365px; margin-left: -188px; z-index: 10; }
+.section-04 .btn-change-17 { display: block; width: 54px; height: 29px; top: 1365px; margin-left: -24px; z-index: 10; }
+.section-04 .btn-change-18 { display: block; width: 54px; height: 29px; top: 1365px; margin-left: 135px; z-index: 10; }
+.section-04 .btn-link-01 { display: block; width: 28px; height: 28px; top: 646px; margin-left: 343px; z-index: 10; }
+.section-04 .btn-link-02 { display: block; width: 28px; height: 28px; top: 845px; margin-left: 183px; z-index: 10; }
+.section-04 .btn-link-03 { display: block; width: 100px; height: 166px; top: 779px; margin-left: 270px; z-index: 10; }
+.section-04 .btn-link-04 { display: block; width: 28px; height: 28px; top: 1092px; margin-left: 183px; z-index: 10; }
+.section-04 .btn-link-05 { display: block; width: 28px; height: 28px; top: 1291px; margin-left: 183px; z-index: 10; }
+.section-04 .btn-link-06 { display: block; width: 100px; height: 166px; top: 1225px; margin-left: 270px; z-index: 10; }
+.section-caution { position: relative; background: url("http://static.plaync.co.kr/pr/aion/event/p2016/160518_jushin/bg_caution.jpg") 50% 0 no-repeat; height: 411px; height: auto; background-color: #2d4a94; }
+.section-caution .caution-wrap { margin: 50px auto 70px; width: 1100px; color: #fff; }
+.section-caution .caution-wrap h2 { height: 30px; padding-bottom: 15px; }
+.section-caution .caution-wrap .list { line-height: 23px; text-indent: 0; }
+.section-caution .caution-wrap .list .btn-rule { font-weight: bold; color: #fff; }
+
+#layer-01 { position: relative; display: none; width: 900px; height: 675px; background: url("http://static.plaync.co.kr/pr/aion/event/p2016/160518_jushin/layer-01.jpg") 0 0 no-repeat; }
+#layer-01 .dialog-content { position: relative; }
+#layer-01 .dialog-content .score-wrap { position: absolute; top: 98px; left: 39px; width: 824px; height: 98px; color: #e0f0ff; font-size: 14px; text-indent: 0; }
+#layer-01 .dialog-content .score-wrap .total { position: absolute; top: 23px; left: 52px; }
+#layer-01 .dialog-content .score-wrap .get { position: absolute; top: 50px; left: 52px; }
+#layer-01 .dialog-content .score-wrap .use { position: absolute; top: 23px; left: 453px; }
+#layer-01 .dialog-content .score-wrap .live { color: #d263e3; }
+#layer-01 .dialog-content .score-wrap .master { color: #51b7ff; }
+#layer-01 .dialog-content .tab-wrap { top: 222px; margin-left: -419px; width: 839px; }
+#layer-01 .dialog-content .tab-wrap .tab { overflow: hidden; height: 50px; }
+#layer-01 .dialog-content .tab-wrap .tab li { float: left; margin-left: 13px; }
+#layer-01 .dialog-content .tab-wrap .tab li:first-child { margin-left: 0; }
+#layer-01 .dialog-content .tab-wrap .tab li a { text-indent: -999em; display: block; width: 413px; height: 50px; }
+#layer-01 .dialog-content .tab-wrap .tab-content { display: none; overflow: hidden; padding: 20px 0 0 22px; font-size: 14px; color: #fff; text-align: center; text-indent: 0; }
+#layer-01 .dialog-content .tab-wrap .tab-content > div { float: left; }
+#layer-01 .dialog-content .tab-wrap .tab-content > div .scroll { max-height: 255px; overflow-x: hidden; overflow-y: auto; }
+#layer-01 .dialog-content .tab-wrap .tab-content.live thead th { background-color: #9371a6; }
+#layer-01 .dialog-content .tab-wrap .tab-content.live tbody td { background-color: #6f4972; }
+#layer-01 .dialog-content .tab-wrap .tab-content.live th, #layer-01 .dialog-content .tab-wrap .tab-content.live td { border-left: 1px solid #3a134d; border-top: 1px solid #3a134d; }
+#layer-01 .dialog-content .tab-wrap .tab-content.master thead th { background-color: #667a9a; }
+#layer-01 .dialog-content .tab-wrap .tab-content.master tbody td { background-color: #465f81; }
+#layer-01 .dialog-content .tab-wrap .tab-content.master th, #layer-01 .dialog-content .tab-wrap .tab-content.master td { border-left: 1px solid #132233; border-top: 1px solid #132233; }
+#layer-01 .dialog-content .tab-wrap .tab-content .get { width: 290px; padding-right: 19px; }
+#layer-01 .dialog-content .tab-wrap .tab-content .get .col1 { width: 181px; }
+#layer-01 .dialog-content .tab-wrap .tab-content .use { width: 486px; }
+#layer-01 .dialog-content .tab-wrap .tab-content .use .col1 { width: 161px; }
+#layer-01 .dialog-content .tab-wrap .tab-content .use .col2 { width: 240px; }
+#layer-01 .dialog-content .tab-wrap .tab-content table { width: 100%; }
+#layer-01 .dialog-content .tab-wrap .tab-content table th, #layer-01 .dialog-content .tab-wrap .tab-content table td { height: 35px; }
+#layer-01 .dialog-content .tab-wrap .tab-content table td.score { padding-left: 15px; }
+#layer-01 .dialog-content .tab-wrap .tab01 .tab { background: url("http://static.plaync.co.kr/pr/aion/event/p2016/160518_jushin/bg_tab_01.jpg") 0 0 no-repeat; }
+#layer-01 .dialog-content .tab-wrap .tab01 #tab-01 { display: block; width: 100%; height: 335px; background: url("http://static.plaync.co.kr/pr/aion/event/p2016/160518_jushin/bg_tab_cnts_01.jpg") 0 0 no-repeat; }
+#layer-01 .dialog-content .tab-wrap .tab02 .tab { background: url("http://static.plaync.co.kr/pr/aion/event/p2016/160518_jushin/bg_tab_02.jpg") 0 0 no-repeat; }
+#layer-01 .dialog-content .tab-wrap .tab02 #tab-02 { display: block; width: 100%; height: 335px; background: url("http://static.plaync.co.kr/pr/aion/event/p2016/160518_jushin/bg_tab_cnts_02.jpg") 0 0 no-repeat; }
+#layer-01 + .layerClose { display: block; width: 30px; height: 30px; top: 24px; margin-left: 395px; z-index: 10; }
+
+#layer-02 { position: relative; display: none; width: 700px; height: 500px; background: url("http://static.plaync.co.kr/pr/aion/event/p2016/160518_jushin/layer-02.jpg") 0 0 no-repeat; }
+#layer-02 + .layerClose { display: block; width: 30px; height: 30px; top: 0px; margin-left: 316px; z-index: 10; }
+
+#layer-03 { position: relative; display: none; width: 700px; height: 500px; background: url("http://static.plaync.co.kr/pr/aion/event/p2016/160518_jushin/layer-03.jpg") 0 0 no-repeat; }
+#layer-03 + .layerClose { display: block; width: 30px; height: 30px; top: 0px; margin-left: 316px; z-index: 10; }
+
+#layer-04 { position: relative; display: none; width: 800px; height: 737px; background: url("http://static.plaync.co.kr/pr/aion/event/p2016/160518_jushin/layer-04.jpg") 0 0 no-repeat; }
+#layer-04 table { overflow: hidden; position: absolute; left: -999em; font-size: 0; height: 0; }
+#layer-04 + .layerClose { display: block; width: 30px; height: 30px; top: 23px; margin-left: 345px; z-index: 10; }
+
+#layer-05 { position: relative; display: none; width: 800px; height: 675px; background: url("http://static.plaync.co.kr/pr/aion/event/p2016/160518_jushin/layer-05.jpg") 0 0 no-repeat; }
+#layer-05 table { overflow: hidden; position: absolute; left: -999em; font-size: 0; height: 0; }
+#layer-05 + .layerClose { display: block; width: 30px; height: 30px; top: 23px; margin-left: 345px; z-index: 10; }
+
+.quick-menu { position: relative; background: url("http://static.plaync.co.kr/pr/aion/event/p2016/160518_jushin/quick.png") 50% 0 no-repeat; height: 515px; background-position: 0 0; display: block; position: fixed; top: 50%; left: 50%; width: 183px; margin-top: -138px; margin-left: 438px; }
+.quick-menu ul { display: block; position: absolute; top: 220px; left: 50px; width: 100px; }
+.quick-menu ul li a { display: block; }
+.quick-menu ul li a.evt01 { height: 33px; }
+.quick-menu ul li a.evt02 { height: 55px; }
+.quick-menu ul li a.evt03 { height: 55px; }
+.quick-menu ul li a.evt04 { height: 40px; }
+.quick-menu .top { display: block; width: 62px; height: 20px; bottom: 90px; margin-left: -22px; z-index: 10; }
