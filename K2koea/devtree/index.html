@@ -1,0 +1,301 @@
+<!DOCTYPE html> 
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>Publishing DevTree List</title>
+<script type="text/javascript" src="js/jquery-1.11.2.js"></script>
+<script type="text/javascript">
+	$(function($){
+		$('tr:nth-child(even)').css('background','#fafafa');
+		$('p').css('padding-left', '16px');
+		$('strong').css('font-weight', 'bold');
+	});
+</script>
+<link rel="stylesheet" type="text/css" href="css/basic.css">
+</head>
+<body>
+	<h1>K2 통합 쇼핑몰 구축 퍼블리싱 리스트</h1>
+	<div class="btnwrap">
+		<div class="btn pc"><a href="pb_tree_pc.html">PC Web</a></div>
+		<!--<div class="btn mobile"><a href="pb_tree_mb.html">Mobile Web</a></div>-->
+		<div class="btn pc"><a href="guide_pc.html" target="_blank">Guide</a></div>
+	</div>
+	<div class="navwrap">
+		<ul class="nav">
+			<li><a href="#comm">기본규칙</a></li>
+			<li><a href="#pref">Prefix</a></li>
+			<li><a href="#fold">폴더규칙</a></li>
+		</ul>
+	</div>
+	<a name="comm"></a>
+	<table class="index_tbl">
+		<colgroup>
+			<col style="width:14%">
+			<col style="width:43%">
+			<col style="width:43%">
+		</colgroup>
+		<thead>
+			<tr>
+				<th>항목</th>
+				<th>PC Web</th>
+				<th>Mobile Web</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>SB 위치</td>
+				<td colspan="2">\\124.137.157.240\K2Commerce\K2 이커머스 통합구축\40. 설계\42. front 화면설계서</td>
+			<tr>
+				<td>웹표준</td>
+				<td colspan="2">IE9.0 이상(IE8 고려) , chrome, firefox....</td>
+			</tr>
+			<!--<tr>-->
+				<!--<td>웹접근성</td>-->
+				<!--<td colspan="2">-->
+					<!--<strong>KWHA 80점 이상 준수</strong><br />-->
+					<!--<br />-->
+					<!--<strong>##KWHA 항목##</strong>-->
+					<!--<p>naver의 N-WAX 이용(사용 여부는 협의 후 결정)<br />N-WAX 설치 및 방법 : 아래 링크에서 해당 브라우저의 addon 설치 <br />-->
+					<!--<a href="http://nuli.navercorp.com/sharing/blog/post/841716" target="_blank">http://nuli.navercorp.com/sharing/blog/post/841716</a></p>-->
+					<!--<br />-->
+					<!--<strong>##웹접근성 주의 항목##</strong>-->
+					<!--<p>-->
+						<!--<ul>-->
+							<!--<li>대체텍스트 사용 : skip navigation / alt / 이미지 외 대체 텍스트</li>-->
+							<!--<li>테이블 : caption이나 summary중 한가지만 처리 / scope 방향 정의</li>-->
+							<!--<li>iframe에 반드시 title="내용" 넣어줄것</li>-->
+							<!--<li>form : label for 와 id 맞출것</li>-->
+							<!--<li>브라우져 상단에 title을 내용에 맞게 넣을 것. <br />(예> 원정대 안내 | GS리테일 Fresh 원정대 | 신선스토리 | GS리테일) title은 몇 depth까지 적용할 지 규칙을 정해서 적용한다. <br />단 현재 최종 depth 명칭은 나와야 함</li>-->
+							<!--<li>대체 텍스트 사용 시 : overflow:hidden 이용</li>-->
+						<!--</ul>-->
+					<!--</p>-->
+				<!--</td>-->
+			<!--</tr>-->
+			<tr>
+				<td>DTD 선언</td>
+				<td><xmp><!DOCTYPE html></xmp></td>
+				<td><xmp><!DOCTYPE html></xmp>html 제작 시 모바일은 html5 태그 및 css3 에서 사용하는 테그와 속성으로 적용</td>
+			</tr>
+			<tr>
+				<td>html 네이밍 규칙</td>
+				<td colspan="2">디렉토리 네이밍 확정 후 정의</td>
+			</tr>
+			<tr>
+				<td>class 파일명</td>
+				<td colspan="2">
+					<ul>
+						<li>common.css : 공통 사용항목(기본테그 정리, 간격, 웹폰트항목, 폰트 사이즈 등)</li>
+						<li>layout.css : 기본 layout에 포함되는 항목들 (header, footer, gnb등)</li>
+						<li>popup.css : 윈도우 popup에 사용되는 css (레이어팝업 포함)</li>
+						<li>main.css</li>
+						<li>contents.css : 컨텐츠에서 사용하는 css import</li>
+					</ul>
+
+				</td>
+			</tr>
+			<tr>
+				<td>class,id 기본규칙</td>
+				<td colspan="2">
+					<ul>
+						<li>class와 id 작성 시 카멜기법 사용하지 않고 "_"로 단어와 단어를 연결한다.</li>
+						<li>word_word 방식을 사용하고 대문자는 사용하지 않는다.</li>
+						<li>숫자를 앞에 넣지 않는다</li>
+						<li>class명칭은 해당 항목의 영문이름으로 앞 1글자, 중간 1글자, 끝 1글자를 따서 약자로 줄인다. (예>table : .tbl, contents : .cnt)</li>
+						<li>class 작성 순서
+							<p>position 등 위치, z-index, background 등 배경, width, height, margin, padding, font style등</p>
+						</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>id규칙</td>
+				<td colspan="2">id값은 js에서 필수로 처리되지 않는 한 개발과 협의 후 사용할것</td>
+			</tr>
+			<tr>
+				<td>class규칙</td>
+				<td colspan="2">
+					<ul>
+						<li>logo : .lg</li>
+						<li>gnb : .gnb_wrap > .gnb > .gnb_</li>
+						<li>mlb : .mlb_wrap > .mlb > .mlb_</li>
+						<li>body contents 부분 : .cnt_wrap > .cnt > ...</li>
+						<li>table : .tbl_wrap> .tbl1, tbl2, tbl3,...</li>
+						<li>btn : .btn_wrap> .btn1, .btn2, .btn3</li>
+						<li>layer : .lypop_wrap> .lypop >...</li>
+						<li>popup : .pop_wrap > .pop...</li>
+						<li>footer : .ft_wrap > .ft</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>jQuery버전</td>
+				<td colspan="2">
+					<ul>
+						<li>hybris js 사용</li>
+						<li>ui.js - 추가 개발 시</li>
+					</ul>
+		
+				</td>
+			</tr>
+			<tr>
+				<td>폴더규칙</td>
+				<td colspan="2"> 미확정(폴더명 : k2 / eider / wideangle / salewa / ???) </td>
+			</tr>
+			<tr>
+				<th>이슈</th>
+				<td>
+					<ul>
+						<li><strong>브라우저 1540px</strong></li>
+						<li>그외 컨텐츠화면은 가로 1200px</li>
+					</ul>
+				</td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+	<a name="pref"></a>
+	<table summary="다양한 prefix 를 나타내는표" class="tbl">
+		<caption>* 분류별 class name prefix 구분</caption>
+		<colgroup>
+			<col style="" />
+			<col style="" />
+			<col style="" />
+		</colgroup>
+		<thead>
+			<tr>
+				<th scope="col">분류</th>
+				<th scope="col">class name prefix</th>
+				<th scope="col">비고</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>타이틀</td>
+				<td>tlt</td>
+				<td>일반적인 타이틀일경우</td>
+			</tr>
+			<tr>
+				<td rowspan="3">영역</td>
+				<td>sect</td>
+				<td>제목이 들어간 일반 영역</td>
+			</tr>
+			<tr>
+				<td>wrap</td>
+				<td>일반 영역을 묶을 경우, 대표적으로 사용할때만 사용한다.</td>
+			</tr>
+			<tr>
+				<td rowspan="2">메뉴</td>
+				<td>gnb</td>
+				<td>상단 top 메뉴</td>
+			</tr>
+			<tr>
+				<td>mlb</td>
+				<td>네비게이션메뉴</td>
+			</tr>
+			<tr>
+				<td>탭</td>
+				<td>tab</td>
+				<td>탭메뉴</td>
+			</tr>
+			<tr>
+				<td>테이블</td>
+				<td>tbl</td>
+				<td>예>tbl1, tbl2, tbl3</td>
+			</tr>
+			<tr>
+				<td>목록</td>
+				<td>list</td>
+				<td>일반 목록 ul li ol 등</td>
+			</tr>
+			<tr>
+				<td rowspan="4">폼</td>
+				<td>inp / chk / rdo</td>
+				<td>input 테그에 class 적용할때 / checkbox 적용 시 / radio 버튼 적용시</td>
+			</tr>
+			<tr>
+				<td>lab</td>
+				<td>label</td>
+			</tr>
+			<tr>
+				<td>opt</td>
+				<td>selectbox option</td>
+			</tr>
+			<tr>
+				<td>tf</td>
+				<td>textfield</td>
+			</tr>
+			<tr>
+				<td rowspan="4">텍스트</td>
+				<td>txt</td>
+				<td>내용 중 텍스트에 속성을 다양하게 적용할 시</td>
+			</tr>
+			<tr>
+				<td>num</td>
+				<td>숫자사용시 (예>num1, num2)</td>
+			</tr>
+			<tr>
+				<td>copy</td>
+				<td>copyright</td>
+			</tr>
+			<tr>
+				<td>time / day / week / month / year</td>
+				<td>날짜 및 시간</td>
+			</tr>
+			<tr>
+				<td>버튼 / 아이콘</td>
+				<td>btn / ico</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>박스</td>
+				<td>box</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>배경</td>
+				<td>bg</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>페이징</td>
+				<td>paging</td>
+				<td>게시판의 페이징 적용</td>
+			</tr>
+			<tr>
+				<td>검색</td>
+				<td>sch</td>
+				<td>검색박스 등</td>
+			</tr>
+			<tr>
+				<td>방향 및 순서</td>
+				<td>lt / rt / cnt / fst / scd / trd / mid / lst</td>
+				<td>왼쪽 / 오른쪽 / 중앙 / 첫번째 / 두번째 / 세번째/ 가운데 / 마지막</td>
+			</tr>
+			<tr>
+				<td rowspan="3">간격/ 사이즈</td>
+				<td>mt10, mb20, ml30, mr40, pt10, pb20, pl30, pr40...</td>
+				<td>margin / padding</td>
+			</tr>
+			<tr>
+				<td>fs14, fs20..</td>
+				<td>font-size:14px, font-size:20px..</td>
+			</tr>
+			<tr>
+				<td>w100, w200, h300, h500..</td>
+				<td>width:100px, width:200px; height:300px; height:500px...</td>
+			</tr>
+			<tr>
+				<td>팝업</td>
+				<td>pop / lypop</td>
+				<td>팝업 / 레이어팝업</td>
+			</tr>
+			<tr>
+				<td>광고 배너</td>
+				<td>ad / banner</td>
+				<td>광고 / 배너</td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>

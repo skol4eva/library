@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="pragma" content="no-cache"/>
+    <meta http-equiv="Cache-Control" content="No-Cache"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=1, target-densitydpi=medium-dpi" />
+    <title> Table | K2 </title>
+
+    <!-- ie8 미디어쿼리 사용하기위해 스크립트보다 상위에 위치 -->
+    <link rel="stylesheet" type="text/css" href="../../../../_ui/desktop/theme-k2/css/reset.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="../../../../_ui/desktop/theme-k2/css/k2-ui.css" media="all" />
+
+    <script type="text/javascript" src="../../../../_ui/desktop/theme-k2/js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="../../../../_ui/desktop/theme-k2/js/jquery.screwdefaultbuttonsV2.js"></script>
+    <script type="text/javascript" src="../../../../_ui/desktop/theme-k2/js/k2-ui.js"></script>
+
+</head>
+<body>
+<div id="page">
+
+    <!-- ui-content -->
+    <div id="content">
+        <div class="ui-contents clearfix">
+        	
+        	<div class="title_area">
+				<h3 class="tlt_dpt01">Table type1 - 장바구니(tbl_style_03)</h3>
+			</div>
+            <div class="table_area">
+                <table class="tbl_style_03">
+                    <caption>장바구니 목록</caption>
+                    <colgroup>
+                        <col width="62px">
+                        <col width="528px">
+                        <col width="150px">
+                        <col width="120px">
+                        <col width="120px">
+                        <col width="*">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th>
+                            <div class="chkRd_box">
+                                <input type="checkbox" id="chk01" />
+                                <label for="chk01">전체선택</label>
+                            </div>
+                        </th>
+                        <th>상품정보</th>
+                        <th>수량</th>
+                        <th>상품가격</th>
+                        <th>마일리지</th>
+                        <th>주문/삭제</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <div class="chkRd_box">
+                                <input type="checkbox" id="chk01_1" />
+                                <label for="chk01_1">선택</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="cart_prd">
+                                <a href="#" class="thumb_img">
+                                    <img src="../images/cart_thumb_img.jpg" alt="제품명">
+                                    <span class="deal">K-DEAL</span>
+                                </a>
+                                <div class="prd_info">
+                                    <p class="evt_txt">이벤트 특가상품</p>
+                                    <p class="prd_name"><a href="#">남성용 플라이워크 후드 자켓</a><span class="sold_out">[품절]</span></p>
+                                    <p class="prd_opt">
+                                        <span class="opt">색상 : <span>그레이</span></span>
+                                        <span class="opt">사이즈 : <span>100</span></span>
+                                    </p>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="qty_area">
+                                <button class="btn_minus">수량 빼기</button>
+                                <input type="text" id="txtqty" value="1" readonly="readonly" title="수량">
+                                <button class="btn_plus">수량 더하기</button>
+                            </div>
+                            <button class="btn_st_04 bg_gray">변경</button>
+                        </td>
+                        <td><span class="cart_num price font-en">48,000 <span class="prc_mark">W</span></span></td>
+                        <td><span class="cart_num mileage font-en">48,000 <span class="prc_mark">M</span></span></td>
+                        <td>
+                            <div class="cart_btn_area">
+                                <button class="btn_st_04">주문</button>
+                                <button class="btn_st_04 bg_gray">삭제</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="chkRd_box">
+                                <input type="checkbox" id="chk01_2" />
+                                <label for="chk01_2">선택</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="cart_prd">
+                                <a href="#" class="thumb_img">
+                                    <img src="../images/cart_thumb_img.jpg" alt="제품명">
+                                    <span class="deal">K-DEAL</span>
+                                </a>
+                                <div class="prd_info">
+                                    <p class="evt_txt">이벤트 특가상품</p>
+                                    <p class="prd_name"><a href="#">남성용 플라이워크 후드 자켓</a><span class="sold_out">[품절]</span></p>
+                                    <p class="prd_opt">
+                                        <span class="opt">색상 : <span>그레이</span></span>
+                                        <span class="opt">사이즈 : <span>100</span></span>
+                                    </p>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="qty_area">
+                                <button class="btn_minus">수량 빼기</button>
+                                <input type="text" id="txtqty" value="1" readonly="readonly" title="수량">
+                                <button class="btn_plus">수량 더하기</button>
+                            </div>
+                            <button class="btn_st_04 bg_gray">변경</button>
+                        </td>
+                        <td><span class="cart_num price font_en">48,000 <span class="prc_mark">W</span></span></td>
+                        <td><span class="cart_num mileage font_en">48,000 <span class="prc_mark">M</span></span></td>
+                        <td>
+                            <div class="cart_btn_area">
+                                <button class="btn_st_04">주문</button>
+                                <button class="btn_st_04 bg_gray">삭제</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="chkRd_box">
+                                <input type="checkbox" id="chk01_3" />
+                                <label for="chk01_3">선택</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="cart_prd">
+                                <a href="#" class="thumb_img">
+                                    <img src="../images/cart_thumb_img.jpg" alt="제품명">
+                                    <span class="deal">K-DEAL</span>
+                                </a>
+                                <div class="prd_info">
+                                    <p class="evt_txt">이벤트 특가상품</p>
+                                    <p class="prd_name"><a href="#">남성용 플라이워크 후드 자켓</a><span class="sold_out">[품절]</span></p>
+                                    <p class="prd_opt">
+                                        <span class="opt">색상 : <span>그레이</span></span>
+                                        <span class="opt">사이즈 : <span>100</span></span>
+                                    </p>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="qty_area">
+                                <button class="btn_minus">수량 빼기</button>
+                                <input type="text" id="txtqty" value="1" readonly="readonly" title="수량">
+                                <button class="btn_plus">수량 더하기</button>
+                            </div>
+                            <button class="btn_st_04 bg_gray">변경</button>
+                        </td>
+                        <td><span class="cart_num price font_en">48,000 <span class="prc_mark">W</span></span></td>
+                        <td><span class="cart_num mileage font_en">48,000 <span class="prc_mark">M</span></span></td>
+                        <td>
+                            <div class="cart_btn_area">
+                                <button class="btn_st_04">주문</button>
+                                <button class="btn_st_04 bg_gray">삭제</button>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <hr style="display: block;margin:50px 0">
+
+            <div class="title_area">
+                <h3 class="tlt_dpt01">Table type1 - 장바구니(tbl_style_03) - 상품없을때</h3>
+            </div>
+            <div class="table_area">
+                <table class="tbl_style_03">
+                    <caption>장바구니 목록</caption>
+                    <colgroup>
+                        <col width="62px">
+                        <col width="528px">
+                        <col width="150px">
+                        <col width="120px">
+                        <col width="120px">
+                        <col width="*">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th>
+                            <div class="chkRd_box">
+                                <input type="checkbox" id="chk01" />
+                                <label for="chk01">전체선택</label>
+                            </div>
+                        </th>
+                        <th>상품정보</th>
+                        <th>수량</th>
+                        <th>상품가격</th>
+                        <th>마일리지</th>
+                        <th>삭제</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <!-- td에 클래스 추가 -->
+                        <td colspan="6" class="cart_no_item">
+                            <p>장바구니에 담은 상품이 없습니다.</p>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <hr style="display: block;margin: 50px 0;">
+
+            <div class="title_area2">
+                <h3 class="tlt_dpt02">배송지 정보</h3>
+            </div>
+            <div class="table_area">
+                <table class="tbl_style_04">
+                    <caption>배송지 정보</caption>
+                    <colgroup>
+                        <col width="180px">
+                        <col width="370px">
+                        <col width="180px">
+                        <col width="*">
+                    </colgroup>
+                    <tbody>
+                    <tr>
+                        <th>받는분</th>
+                        <td colspan="3">홍길동</td>
+                    </tr>
+                    <tr>
+                        <th>주소</th>
+                        <td colspan="3">(12345)서울특별시 강남구 역삼동 1가 123457</td>
+                    </tr>
+                    <tr>
+                        <th>휴대폰</th>
+                        <td>010-0000-0000</td>
+                        <th>전화번호</th>
+                        <td>000-0000-0000</td>
+                    </tr>
+                    <tr>
+                        <th>배송메모</th>
+                        <td colspan="3">현관문앞에 놔주세요.</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+
+        </div>
+    </div>
+    <!-- //ui-content -->
+
+
+
+
+</div>
+
+</body>
+</html>

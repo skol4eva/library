@@ -1,0 +1,46 @@
+@charset "utf-8";
+
+/*
+	Author : IDR (2016.06)
+	Comment : component.css
+	Modify : 
+*/
+
+/* font */
+.font-en{font-family:'Roboto','Arial' !important;}
+
+/* tabs-component */
+.tabs-comp{overflow:hidden;margin-bottom:40px}
+.tabs-comp ul{border-bottom:1px solid #666;height:49px}
+.tabs-comp ul li{float:left;background:url('../images/common/ico_bar.gif') no-repeat 100% 50%}
+.tabs-comp ul li a{display:block;color:#666;font-size:14px;font-weight:bold;padding:17px 0;min-width:200px;text-align:center}
+.tabs-comp ul li.current,
+.tabs-comp ul li.none{background:none}
+.tabs-comp ul li.current a{color:#000;background:#fff;border:1px solid #666;border-bottom:0;margin:0 0 -1px 0;padding:17px 0 16px;min-width:198px}
+.tabs-comp .tabs-panel{}
+.tabs-comp .tabs-panel .panel-section{display:none;margin-top:40px}
+/* tabs-component :: arr type */
+.tabs-comp.type-arr{position:relative;margin-bottom:30px}
+.tabs-comp.type-arr > a,
+.tabs-comp.type-arr > button{position:absolute;right:0;top:0}
+.tabs-comp.type-arr ul{height:auto;overflow:hidden;border:none;text-align:center;min-height:21px}
+.tabs-comp.type-arr ul li{float:none;display:inline-block;*display:inline;zoom:1;vertical-align:top;background:none}
+.tabs-comp.type-arr ul li + li{margin-left:25px}
+.tabs-comp.type-arr ul li a{padding:0;min-width:inherit;text-align:left;padding:0 0 8px 0;border:none}
+.tabs-comp.type-arr ul li.current a{background:url('../images/common/tab_arr.png') no-repeat 50% 100%;margin:0;padding:0 0 13px 0;min-width:inherit}
+
+/* dialog */
+.ui-widget-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:#000;opacity:.4;filter:Alpha(Opacity=40);z-index:999}
+.ui-dialog{display:none;background:#fff;position:absolute;z-index:9991;max-width:1080px}
+.ui-dialog-titlebar{height:18px;padding:20px 30px;background-color:#d2232a;font-size:18px;line-height:1;color:#fff}
+.ui-dialog .ui-dialog-content{position:relative;overflow:auto;zoom:1;padding:30px}
+.ui-dialog .ui-dialog-titlebar-close{position:absolute;top:20px;right:30px;color:#fff}
+.ui-dialog .ui-dialog-titlebar-close .ui-icon-closethick{ display: inline-block; width: 16px; height: 14px; background: url('../images/btn_layer_close.png') 0 0 no-repeat;}
+.ui-dialog .ui-dialog-titlebar-close .ui-button-text{ text-indent: -999em; font-size: 0;}
+/* spinner */
+.ui-spinner{position:relative;padding:0 25px;display:inline-block;width:98px;box-sizing: border-box;vertical-align:top}
+.ui-spinner input[type=text]{display:block;float:left;width:46px;height:24px;padding:0;border:0;text-align:center;font-size:12px;outline:none}
+.ui-spinner-button{position:absolute;right:0;top:0;display:inline-block;width:25px;height:24px;background: url('../images/ico_plusminus.png') no-repeat; font-size: 0; text-indent: -999em;vertical-align:top;cursor:pointer}
+.ui-spinner-button.ui-spinner-up{background-position: -24px 0; border-left:1px solid #929292;}
+.ui-spinner-button.ui-spinner-down{left:0;right:auto;background-position: 0 0; border-right:1px solid #929292;}
+.ui-spinner-button .ui-button-text{display:none}
