@@ -28,7 +28,7 @@ ul,ol{list-style:none}
 h1,h2,h3,h4,h5,h6{font-weight: 400;}
 button{overflow:visible;border:0;background-color:transparent;cursor:pointer}
 button::-moz-focus-inner{padding:0;}
-input,button{-webkit-appearance:none;-moz-appearance:none;appearance:none}
+/*input,button{-webkit-appearance:none;-moz-appearance:none;appearance:none}*/
 select{vertical-align:top}
 address,caption,em{font-style:normal}
 a,a:focus,a:active,a:hover{color:#000;text-decoration:none}

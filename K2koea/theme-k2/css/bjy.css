@@ -38,7 +38,7 @@
 .btn_st_04:hover{color:#fff}
 
 /* chkeckbox, radio */
-.chkRd_box label{ padding-left:7px;font-size: 16px;}
+.chkRd_box label{margin-left: -30px;padding-left:36px;font-size: 16px;}
 .styledRadio, .styledCheckbox {display: inline-block; vertical-align: middle;}
 
 

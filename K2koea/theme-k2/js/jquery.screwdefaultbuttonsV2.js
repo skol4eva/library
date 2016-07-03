@@ -35,7 +35,10 @@
 					$.error( 'There is no image assigned for ScrewDefaultButtons' );
 				}
 
-				$this.wrap('<div >').css({'display': 'none'});
+				$this.wrap('<div >').css({
+					// 'display': 'none',
+					'height': '0',
+				});
 
 				var buttonClass = $this.attr('class');
 				var buttonClick = $this.attr('onclick');

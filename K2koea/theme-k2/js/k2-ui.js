@@ -346,6 +346,43 @@ $(function(){
 
 	// css 호출
 	cssControls();
+
+	var $allChk = $('.all_chk').find('input:checkbox'),
+		$agrChk = $('.agr_chk').find('input:checkbox');
+
+	$allChk.change(function(){
+		var checkAll = $allChk.prop('checked');
+
+		if($allChk.prop('checked')){
+			$agrChk.prop('checked', true);
+			// $agrChk.screwDefaultButtons('check');
+			console.log('all_true1');
+		}else{
+			$agrChk.prop('checked', false);
+			// $agrChk.screwDefaultButtons('uncheck');
+			console.log('all_false1');
+		}
+	});
+
+	$agrChk.change(function(){
+		var $contentCk = true;
+		$agrChk.each(function(){
+			if($contentCk){
+				$contentCk = $(this).prop('checked');
+				if(!$contentCk){
+					$allChk.prop('checked', false);
+					// $allChk.screwDefaultButtons('uncheck');
+					console.log('all_false2');
+				}
+			}
+
+		});
+		if($contentCk){
+			$allChk.prop('checked', true);
+			// $allChk.screwDefaultButtons('check');
+			console.log('all_true2');
+		}
+	});
 });
 
 // 하위 브라우저 크로스 브라우징을 위한 css 컨트롤
