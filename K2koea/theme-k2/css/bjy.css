@@ -358,6 +358,7 @@ select{ text-indent: 20px; border:1px solid #bbb;color:#333;font-size:14px;heigh
 .order_wrap .order_info_area .payment_info .pym_tab li .chkRd_box{ display: inline-block;}
 .order_wrap .order_info_area .payment_info .pym_tab li .chkRd_box label{ font-size: 12px;}
 .order_wrap .order_info_area .payment_info .pym_tab li .chkRd_box + .chk_escrow{ display: inline-block;}
+.order_wrap .order_info_area .payment_info .pym_tab li .chkRd_box + .chk_escrow label{ margin-left: -30px;padding-left:36px;}
 .order_wrap .order_info_area .payment_info .pym_cnts{}
 .order_wrap .order_info_area .payment_info .pym_cnts .cnts_section{ padding-top: 30px; display: none;}
 .order_wrap .order_info_area .payment_info .pym_cnts .cnts_section .title{ padding-bottom: 10px;font-size: 16px; font-weight: bold;}
