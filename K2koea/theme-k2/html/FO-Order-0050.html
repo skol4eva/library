@@ -17,7 +17,6 @@
 <script type="text/javascript" src="../js/jquery-ui-1.11.2.min.js"></script>
 <script type="text/javascript" src="../js/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="../js/k2-ui.min.js"></script>
-<script type="text/javascript" src="../js/jquery.screwdefaultbuttonsV2.js"></script>
 
 <!-- 협업 작업을 위한 UI 배포 JS :: 개발엔 넘기지 말것 -->
 <script type="text/javascript" src="../js/include.js"></script>
@@ -177,7 +176,7 @@
 								</tbody>
 							</table>
 						</div>
-						<p class="list_01_li">주문자 정보는 (마이페이지 > 정보변경 및 관리)에서만 수정 가능합니다. </p>
+						<p class="list_01_li">주문자 정보는 (마이페이지 > 회원정보 변경)에서만 수정 가능합니다. </p>
 
 						<div class="title_area2">
 							<h3 class="tlt_dpt02">배송지 정보</h3>
@@ -213,7 +212,7 @@
 									</td>
 								</tr>
 								<tr>
-									<th><label for="recipient">받는 분<em class="ico_req">필수입력</em></label></th>
+									<th><label for="recipient">수령인<em class="ico_req">필수입력</em></label></th>
 									<td colspan="3">
 										<div class="cell">
 											<input type="text" id="recipient" value="홍길동" class="w_st01" readonly="readonly">
@@ -232,12 +231,21 @@
 									<td>
 										<div class="cell">
 											<input type="text" class="w_st04" title="지역주소" readonly="readonly"> <input type="text" class="w_st04" title="상세주소">
+										</div>
+										<div class="cell shipping_choose">
 											<div class="chkRd_box">
-												<input type="checkbox" id="free_num3" />
-												<label for="free_num3">기본 배송지로 지정</label>
+												<input type="radio" naem="delvr_adrs" id="adrs_save" />
+												<label for="adrs_save">배송지 저장</label>
+											</div>
+											<div class="chkRd_box">
+												(<input type="checkbox" id="adrs_default" />
+												<label for="adrs_default">기본 배송지로 지정</label>)
+											</div>
+											<div class="chkRd_box">
+												<input type="radio" name="delvr_adrs" id="adrs_nosave" />
+												<label for="adrs_nosave">배송지 저장하지 않음</label>
 											</div>
 										</div>
-
 									</td>
 								</tr>
 								<tr>
@@ -302,15 +310,16 @@
 									<th><label for="sel_coupon">쿠폰할인</label></th>
 									<td>
 										<div class="cell">
-											<select name="" id="sel_coupon" style="width: 245px;">
-												<option value="">선택하세요.</option>
-											</select>
+											<input type="text" id="sel_coupon" style="width: 245px;text-align: right;">
 											<span class="btn p0">
-												<button class="btn_st_02">적용</button>
+												<a href="javascript:;" class="btn_st_02 js-dialog" data-href="./popup/FO-Order-0062.html">쿠폰 선택</a>
 												<button class="btn_st_02 bg_gray">취소</button>
 											</span>
 											<span class="cpn_num">사용 가능한 쿠폰(<span>0</span>)개</span>
 										</div>
+										<ul class="list_04 mt10">
+											<li>적용된 쿠폰이 없습니다.</li>
+										</ul>
 									</td>
 								</tr>
 								<tr>
@@ -324,7 +333,7 @@
 											</span>
 											<span class="cpn_num">보유액(<span>0</span>)M</span>
 										</div>
-										<ul class="list_01">
+										<ul class="list_01 mt10">
 											<li>보유액이 1,000마일리지 이상일 경우 사용 가능합니다.</li>
 											<li>1M은 1원으로 환산되어 적용 가능합니다.</li>
 											<li>결제금액을 모두 마일리지로 결제하실 수 있습니다. </li>
@@ -348,10 +357,13 @@
 										<p class="thumb"><img src="../images/freebie_thumb_img1.jpg" alt="사은품명 1"></p>
 										<p class="name">사은품명 2</p>
 									</div>
-									<div class="chkRd_box">
-										<input type="checkbox" id="free_num1" />
-										<label for="free_num1">선택</label>
-										<input type="text" title="사은품 개수 입력">개
+									<div class="num">
+										<div class="chkRd_box">
+											<input type="checkbox" id="free_num1" />
+											<label for="free_num1">선택</label>
+										</div>
+										<input type="text" title="사은품 개수 입력">
+										<span>개</span>
 									</div>
 								</li>
 								<li>
@@ -359,10 +371,13 @@
 										<p class="thumb"><img src="../images/freebie_thumb_img2.jpg" alt="사은품명 1"></p>
 										<p class="name">사은품명 3</p>
 									</div>
-									<div class="chkRd_box">
-										<input type="checkbox" id="free_num2" />
-										<label for="free_num2">선택</label>
-										<input type="text" title="사은품 개수 입력">개
+									<div class="num">
+										<div class="chkRd_box">
+											<input type="checkbox" id="free_num2" />
+											<label for="free_num2">선택</label>
+										</div>
+										<input type="text" title="사은품 개수 입력">
+										<span>개</span>
 									</div>
 								</li>
 								<li>
@@ -370,10 +385,13 @@
 										<p class="thumb"><img src="../images/freebie_thumb_img3.jpg" alt="사은품명 1"></p>
 										<p class="name">사은품명 1</p>
 									</div>
-									<div class="chkRd_box">
-										<input type="checkbox" id="free_num3" />
-										<label for="free_num3">선택</label>
-										<input type="text" title="사은품 개수 입력">개
+									<div class="num">
+										<div class="chkRd_box">
+											<input type="checkbox" id="free_num3" />
+											<label for="free_num3">선택</label>
+										</div>
+										<input type="text" title="사은품 개수 입력">
+										<span>개</span>
 									</div>
 								</li>
 							</ul>
@@ -384,10 +402,13 @@
 										<p class="thumb"><img src="../images/freebie_thumb_img1.jpg" alt="사은품명 1"></p>
 										<p class="name">사은품명 2</p>
 									</div>
-									<div class="chkRd_box">
-										<input type="checkbox" id="free_num4" disabled="disabled" />
-										<label for="free_num4">선택</label>
-										<input type="text" disabled="disabled" title="사은품 개수 입력">개
+									<div class="num">
+										<div class="chkRd_box">
+											<input type="checkbox" id="free_num4" disabled="disabled" />
+											<label for="free_num4">선택</label>
+										</div>
+										<input type="text" title="사은품 개수 입력" disabled="disabled">
+										<span>개</span>
 									</div>
 								</li>
 								<li>
@@ -395,10 +416,13 @@
 										<p class="thumb"><img src="../images/freebie_thumb_img2.jpg" alt="사은품명 1"></p>
 										<p class="name">사은품명 3</p>
 									</div>
-									<div class="chkRd_box">
-										<input type="checkbox" id="free_num5" disabled="disabled" />
-										<label for="free_num5">선택</label>
-										<input type="text" disabled="disabled" title="사은품 개수 입력">개
+									<div class="num">
+										<div class="chkRd_box">
+											<input type="checkbox" id="free_num5" disabled="disabled" />
+											<label for="free_num5">선택</label>
+										</div>
+										<input type="text" title="사은품 개수 입력" disabled="disabled">
+										<span>개</span>
 									</div>
 								</li>
 								<li>
@@ -406,10 +430,13 @@
 										<p class="thumb"><img src="../images/freebie_thumb_img3.jpg" alt="사은품명 1"></p>
 										<p class="name">사은품명 1</p>
 									</div>
-									<div class="chkRd_box">
-										<input type="checkbox" id="free_num6" disabled="disabled" />
-										<label for="free_num6">선택</label>
-										<input type="text" disabled="disabled" title="사은품 개수 입력">개
+									<div class="num">
+										<div class="chkRd_box">
+											<input type="checkbox" id="free_num6" disabled="disabled" />
+											<label for="free_num6">선택</label>
+										</div>
+										<input type="text" title="사은품 개수 입력" disabled="disabled">
+										<span>개</span>
 									</div>
 								</li>
 							</ul>
@@ -420,10 +447,13 @@
 										<p class="thumb"><img src="../images/freebie_thumb_img1.jpg" alt="사은품명 1"></p>
 										<p class="name">사은품명 2</p>
 									</div>
-									<div class="chkRd_box">
-										<input type="checkbox" id="free_num7" disabled="disabled" />
-										<label for="free_num7">선택</label>
-										<input type="text" disabled="disabled" title="사은품 개수 입력">개
+									<div class="num">
+										<div class="chkRd_box">
+											<input type="checkbox" id="free_num7" disabled="disabled" />
+											<label for="free_num7">선택</label>
+										</div>
+										<input type="text" title="사은품 개수 입력" disabled="disabled">
+										<span>개</span>
 									</div>
 								</li>
 								<li>
@@ -431,10 +461,13 @@
 										<p class="thumb"><img src="../images/freebie_thumb_img2.jpg" alt="사은품명 1"></p>
 										<p class="name">사은품명 3</p>
 									</div>
-									<div class="chkRd_box">
-										<input type="checkbox" id="free_num8" disabled="disabled" />
-										<label for="free_num8">선택</label>
-										<input type="text" disabled="disabled" title="사은품 개수 입력">개
+									<div class="num">
+										<div class="chkRd_box">
+											<input type="checkbox" id="free_num8" disabled="disabled" />
+											<label for="free_num8">선택</label>
+										</div>
+										<input type="text" title="사은품 개수 입력" disabled="disabled">
+										<span>개</span>
 									</div>
 								</li>
 								<li>
@@ -442,10 +475,13 @@
 										<p class="thumb"><img src="../images/freebie_thumb_img3.jpg" alt="사은품명 1"></p>
 										<p class="name">사은품명 1</p>
 									</div>
-									<div class="chkRd_box">
-										<input type="checkbox" id="free_num9" disabled="disabled" />
-										<label for="free_num9">선택</label>
-										<input type="text" disabled="disabled" title="사은품 개수 입력">개
+									<div class="num">
+										<div class="chkRd_box">
+											<input type="checkbox" id="free_num9" disabled="disabled" />
+											<label for="free_num9">선택</label>
+										</div>
+										<input type="text" title="사은품 개수 입력" disabled="disabled">
+										<span>개</span>
 									</div>
 								</li>
 							</ul>
@@ -464,28 +500,27 @@
 						<div class="payment_info">
 							<ul class="pym_tab">
 								<li class="current">
-									<div class="chkRd_box">
+									<div class="chkRd_box tab">
 										<input type="radio" name="sel_way" id="pymW1" checked="checked" />
 										<label for="pymW1">신용카드</label>
 									</div>
 								</li>
 								<li>
-									<div class="chkRd_box">
+									<div class="chkRd_box tab">
 										<input type="radio" name="sel_way" id="pymW2" />
 										<label for="pymW2">실시간 계좌이체</label>
 									</div>
 								</li>
-								<li>
+								<li class="escrow">
 									<div class="chkRd_box">
 										<input type="radio" name="sel_way" id="pymW3" />
 										<label for="pymW3">무통장 입금 </label>
 									</div>
-									<div class="chk_escrow">
+									<div class="chkRd_box chk_escrow">
 										( <input type="checkbox" id="pymW4" />
 										<label for="pymW4">에스크로 결제</label> )
 									</div>
 								</li>
-
 							</ul>
 
 							<div class="tabs-panel pym_cnts">
@@ -765,7 +800,7 @@
 							<dd><span class="font-en">2,500 <span class="prc_mark">w</span></span></dd>
 						</dl>
 						<dl class="pym_price total">
-							<dt>총 결제가격</dt>
+							<dt>총 결제금액</dt>
 							<dd><span class="font-en">452,500<span class="prc_mark">w</span></span></dd>
 						</dl>
 						<div class="buy_agree">

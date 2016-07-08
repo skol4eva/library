@@ -35,37 +35,77 @@
 		<!-- ui-header -->
 		<div class="ui-header">
 			<div class="ui-inner">
-				<div class="searchWrap">
-					<button type="button">검색 영역 열기</button>
-					<div class="searchForm">
-						<form id="" name="" method="" action="">
-							<fieldset>
-								<legend>검색영역</legend>
-								<input type="text" />
-								<button type="submit">검색</button>
-							</fieldset>
-						</form>
-					</div>
-				</div>
+				<button type="button" class="allNavBtn">전체메뉴 열기/닫기</button>
+
+				<h1><a href="#self">K2</a></h1>
 
 				<ul class="utilNav">
 					<li><a href="#self">로그인</a></li>
 					<li><a href="#self">회원가입</a></li>
 					<li><a href="#self">마이페이지</a></li>
-					<li><a href="#self">주문/배송</a></li>
-					<li class="cart"><a href="#self">장바구니</a></li>
+					<li class="cart"><a href="#self">장바구니</a><span>05</span></li>
 				</ul>
 
-				<h1><a href="#self">K2</a></h1>
-
 				<ul class="nav">
-					<li class="active"><a href="#self">MAN</a></li>
-					<li><a href="#self">WOMAN</a></li>
-					<li><a href="#self">KIDS</a></li>
-					<li><a href="#self">BAG</a></li>
-					<li><a href="#self">SHOES</a></li>
-					<li><a href="#self">CAMPING</a></li>
-					<li><a href="#self">ACCESSORY</a></li>
+					<!-- 활성화 메뉴 li class="active" -->
+					<li class="active"><a href="#self">MEN</a>
+						<ul>
+							<li><a href="#self">자켓</a></li>
+							<li><a href="#self">티셔츠</a></li>
+							<li><a href="#self">베스트</a></li>
+							<li><a href="#self">팬츠</a></li>
+							<li><a href="#self">언더웨어</a></li>
+						</ul>
+					</li>
+					<li><a href="#self">WOMEN</a>
+						<ul>
+							<li><a href="#self">자켓</a></li>
+							<li><a href="#self">티셔츠</a></li>
+							<li><a href="#self">베스트</a></li>
+							<li><a href="#self">팬츠</a></li>
+							<li><a href="#self">언더웨어</a></li>
+						</ul>
+					</li>
+					<li><a href="#self">KIDS</a>
+						<ul>
+							<li><a href="#self">자켓</a></li>
+							<li><a href="#self">티셔츠</a></li>
+							<li><a href="#self">팬츠</a></li>
+							<li><a href="#self">신발</a></li>
+							<li><a href="#self">용품</a></li>
+						</ul>
+					</li>
+					<li><a href="#self">SHOES</a>
+						<ul>
+							<li><a href="#self">남성용</a></li>
+							<li><a href="#self">여성용</a></li>
+						</ul>
+					</li>
+					<li><a href="#self">BAG</a>
+						<ul>
+							<li><a href="#self">등산가방</a></li>
+							<li><a href="#self">컴포트배낭</a></li>
+							<li><a href="#self">보조가방</a></li>
+						</ul>
+					</li>
+					<li><a href="#self">ACCESSORY</a>
+						<ul>
+							<li><a href="#self">모자</a></li>
+							<li><a href="#self">장갑</a></li>
+							<li><a href="#self">스틱</a></li>
+							<li><a href="#self">양말</a></li>
+							<li><a href="#self">기타</a></li>
+						</ul>
+					</li>
+					<li><a href="#self">CAMPING</a>
+						<ul>
+							<li><a href="#self">텐트</a></li>
+							<li><a href="#self">가구류</a></li>
+							<li><a href="#self">침구류</a></li>
+							<li><a href="#self">취사류 및 기타</a></li>
+							<li><a href="#self">백패킹</a></li>
+						</ul>
+					</li>
 				</ul>
 
 				<ul class="subNav">
@@ -73,7 +113,50 @@
 					<li><a href="#self">EVENT</a></li>
 					<li><a href="#self">BRAND</a></li>
 				</ul>
+
+				<button type="button" class="srchBtn">검색 영역 열기</button>
 			</div>
+
+			<!-- 전체메뉴 -->
+			<div class="allNav">
+				전체메뉴
+			</div>
+			<!-- //전체메뉴 -->
+
+			<!-- 검색영역 -->
+			<cms:pageSlot position="SearchBox" var="component" element="div" class="searchForm">
+				<!-- <cms:component component="${component}" /> -->
+
+				<!-- searchboxcomponent.jsp -->
+				<div class="siteSearch">
+					<form name="search_form_${component.uid}" method="get" action="${searchUrl}">
+						<div class="control-group">
+							<spring:theme code="text.search" var="searchText"/>
+							<label class="control-label skip" for="input_${component.uid}">${searchText}</label>
+							<div class="controls">
+								<spring:theme code="search.placeholder" var="searchPlaceholder"/>
+								<ycommerce:testId code="header_search_input">
+									<input 
+										id="input_${component.uid}" 
+										class="siteSearchInput left" 
+										type="text" 
+										name="text"
+										value="" 
+										maxlength="100" 
+										placeholder="${searchPlaceholder}" 
+										data-options='{"autocompleteUrl" : "${autocompleteUrl}","minCharactersBeforeRequest" : "${component.minCharactersBeforeRequest}","waitTimeBeforeRequest" : "${component.waitTimeBeforeRequest}","displayProductImages" : ${component.displayProductImages}}'/>
+								</ycommerce:testId>
+								<ycommerce:testId code="header_search_button">
+									<button class="siteSearchSubmit" type="submit"/></button>
+								</ycommerce:testId>
+							</div>
+						</div>
+					</form>
+				</div>
+				<!-- //searchboxcomponent.jsp -->
+			</cms:pageSlot>
+			<!-- //검색영역 -->
+
 		</div>
 		<!-- //ui-header -->
 
