@@ -16,7 +16,7 @@
 <script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
 <script type="text/javascript" src="../js/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="../js/jquery.screwdefaultbuttonsV2.js"></script>
-<script type="text/javascript" src="../js/k2-ui.min.js"></script>
+<script type="text/javascript" src="../js/k2-ui.js"></script>
 
 <!-- 협업 작업을 위한 UI 배포 JS :: 개발엔 넘기지 말것 -->
 <script type="text/javascript" src="../js/include.js"></script>
@@ -138,9 +138,15 @@
 										<th>휴대폰<em class="ico_req">필수입력</em></th>
 										<td colspan="3">
 											<div class="cell">
-												<select name="" id="" class="w_st02" title="첫번째 번호 선택">
+
+												<select name="mobile1" id="mobile1" title="핸드폰번호 앞자리" class="w_st02 customized-select">
 													<option value="">선택</option>
-													<option value="">010</option>
+													<option value="010">010</option>
+													<option value="011">011</option>
+													<option value="016">016</option>
+													<option value="017">017</option>
+													<option value="018">018</option>
+													<option value="019">019</option>
 												</select>
 												<input type="text" class="w_st02" title="가운데 번호 입력">
 												<input type="text" class="w_st02" title="마지막 번호 입력">

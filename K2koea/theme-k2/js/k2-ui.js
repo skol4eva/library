@@ -6,192 +6,61 @@ $(function(){
 			var opts = $.extend(defaults, options);
 			return this.each(function(){
 				var $nav = $(this),
-					$navList = $nav.children();
+					$navList = $nav.children(),
+					$listActive = $('.ui-header .nav > li.active');
 
-				if($navList.hasClass('active')){
-					var _active = $nav.find('.active');
-					_active.children('a').append('<span class="arr"></span>');
-					_active.find('.arr').css({'bottom':'0'});
-				}
+				if($listActive.length>0){
+					var $activeIdx = ($listActive.position().left)+(($listActive.width())/2-7);
 
-				$navList.each(function(){
+					$('.ui-header .ui-inner').append('<span class="arr"></span>');
+					var $arr = $('.ui-header .ui-inner .arr');
+
+					$navList.each(function(){
 					var $this = $(this),
 						$links = $('>a', $this);
+	
+						$arr.css({'left': $activeIdx});
+						$links.bind('mouseenter focus',function(){
+							var $thisWid = $this.width()/2;
 
-					$links.bind('mouseenter focus',function(){
-						var _list = $(this).parent();
-						_list.addClass('hover').siblings().removeClass('hover');
-
-						if(_list.hasClass('hover')){
-							if(_list.find('.arr').length>0){
+							if($this.index()==0){
+								var $thisLeft = $this.position().left+ $thisWid-10;
 							}else{
-								$(this).append('<span class="arr"></span>');
+								var $thisLeft = $this.position().left+ $thisWid + 32;
 							}
-						}else{
-							$this.find('.arr').remove();
-						}
 
-						var $listActive = $nav.children('li.hover'),
-							_arr = $(this).find('.arr'),
-							_d2 = $this.children('ul');
+							$arr.stop().animate({'left': $thisLeft}, 'linear');
+						});
 
-						if($listActive.length>0){
-							_arr.stop().animate({'bottom':'0'}, function(){
-								_d2.stop().slideDown('fast');
+						$nav.bind('mouseleave blur',function(){
+							$arr.stop().animate({'left': $activeIdx}, 'linear');
+						});
+
+						$(window).resize(function(){
+							var $thisWid = $listActive.width()/2-7;
+							var $thisLeft = $listActive.position().left+ $thisWid;
+							$arr.css({'left': $thisLeft}, 'linear');
+							$nav.bind('mouseleave blur',function(){
+								$arr.stop().animate({'left': $thisLeft}, 'linear');
 							});
-							_list.siblings().children('ul').fadeOut().after(function(){
-								_list.siblings().find('.arr').stop().animate({'bottom':'-10px'}, function(){
-									_list.siblings().find('.arr').remove();
-								});
-							});
-						}
-					});
-
-					$nav.bind('mouseleave blur',function(){
-						$links.parent().removeClass('hover');
-						$navList.children('ul').fadeOut();
-						var _arr = $this.find('.arr');
-						_arr.stop().animate({'bottom':'-10px'}, function(){
-							if($nav.children('.active').length>0){
-								var _active = $nav.find('.active').children('a');
-								_active.append('<span class="arr"></span>');
-								_active.find('.arr').stop().animate({'bottom':'0'});
-								return false;
-							}else{
-								_arr.remove();
-							}
 						});
 					});
+				}
+
+				var $header = $('.ui-header'),
+					$container = $('.ui-container'),
+					$headerHei = $('.ui-header').height();
+				$(window).bind('scroll', function(){
+					if($(window).scrollTop()>=$headerHei/2){
+						$header.css({'position':'fixed','top':-$headerHei/2});
+						$container.css({'padding-top':$headerHei});
+					}else{
+						$header.css({'position':'static','top':'0'});
+						$container.css({'padding-top':'0'});
+					}
 				});
 			});
 		}, // fn_gnb
-
-		// fn_exception
-		fn_exception: function(options){
-			var defaults = {};
-			var opts = $.extend(defaults, options);
-			return this.each(function(){
-				var $this = $(this),
-					$navBtn = $('.allNavBtn', $this),
-					$allNav = $('.allNav', $this),
-					$searchBtn = $('.srchBtn', $this)
-				$form = $('.searchForm', $this),
-					_win = $(window),
-					_h = 100;;
-
-				$form.css({'top':-$form.height()});
-				$('body').click(function(e) {
-					if(!$(e.target).closest($form).length && !$(e.target).is($form)){
-						if($form.is(":visible")){
-							$form.stop().animate({'top':-$form.height()});
-							$allNav.css({'position':'absolute'}).stop().animate({'top':_h});
-						}
-					}
-				});
-
-				$navBtn.click(function(){
-					$allNav.css({'top':_h}).toggle();
-					if($allNav.is(":visible")){
-						$searchBtn.click(function(){
-							$allNav.stop().animate({'top':'100px'},400);
-						});
-					}
-				});
-
-				$searchBtn.click(function(e){
-					$form.addClass('open').css({'display':'block'}).stop().animate({'top':'0'});
-					$allNav.css({'position':'fixed'}).stop().animate({'top':$form.height()});
-					e.stopPropagation();
-				});
-
-				function headerSize(){
-					if(_win.width()>=1260){
-						$this.addClass('max');
-					}else{
-						$this.removeClass('max');
-					}
-				}
-				headerSize();
-
-				_win.resize(function(){
-					headerSize();
-				});
-
-				// scroll 에 따른 controls
-				_win.bind('scroll', function(e){
-					if(_win.scrollTop()>=_h/2-10){
-						$this.addClass('scrolled').delay(100).animate({'top':-_h/2+10});
-						$('body').css({'padding-top':_h});
-					}else{
-						$this.finish().removeClass('scrolled').attr('style','');
-						$('body').attr('style','');
-					}
-					if(_win.scrollTop()>0){
-						$form.css({'position':'fixed'});
-					}else{
-						$form.css({'position':'absolute'});
-					}
-				});
-			});
-		}, // fn_exception
-
-		// fn_optionSelect
-		fn_optionSelect: function(options){
-			var defaults = {};
-			var opts = $.extend(defaults, options);
-			return this.each(function(){
-				var $this = $(this),
-					$optBtn = $('>a', $this),
-					$optList = $this.find('ul'),
-					$parent = $optBtn.parent();
-
-				$('body').click(function(e) {
-					if(!$(e.target).closest($parent).length && !$(e.target).is($parent)){
-						if($parent.is(":visible")){
-							$optBtn.removeClass('open');
-							$parent.children('div').hide();
-						}
-					}
-				});
-
-				$optBtn.click(function(){
-					$optBox = $parent.children('div');
-					$optBtn.removeClass('open');
-					if($optBox.is(':visible')){
-						$(this).removeClass('open');
-					}else{
-						$(this).addClass('open');
-					}
-					$optBox.toggle();
-				});
-
-				// option select :: text change
-				var _optList = $this.find('ul').children('li').children('a');
-				$optList.children().each(function(){
-					$(this).children().click(function(){
-						$(this).parents('.opt-select').children('a').text($(this).text());
-						$this.find('div').hide();
-						$optBtn.removeClass('open');
-					});
-				});
-
-				// opt-color
-				$colorList = $this.find('.opt-color');
-				$colorList.children().each(function(){
-					$(this).children().click(function(){
-						$(this).parent().addClass('active').siblings().removeClass('active');
-					});
-				});
-
-				// opt-size
-				$sizeList = $this.find('.opt-size');
-				$sizeList.children().each(function(){
-					$(this).children().click(function(){
-						$(this).parent().addClass('active').siblings().removeClass('active');
-					});
-				});
-			});
-		}, // fn_optionSelect
 
 		// fn_family
 		fn_family: function(options){
@@ -223,7 +92,7 @@ $(function(){
 				}
 
 				var $ending = $this.parent().find('.btn_st_03');
-				$ending.hide();
+					$ending.hide();
 
 				// 이벤트 페이지 :: 이벤트 종료시
 				var $end = $this.children('.current'),
@@ -377,10 +246,6 @@ $(function(){
 								$dialogWrap.css({'left':'50%','margin-left':-$dialogWrap.width()/2});
 								$dialogWrap.css({'top':'50%','margin-top':-$dialogWrap.height()/2});
 							});
-
-							if($(".js_datepicker").length>0){
-								$(".js_datepicker").fn_datepicker();
-							}
 						}
 					});
 				}
@@ -391,13 +256,13 @@ $(function(){
 		fn_spinner : function(options) {
 			var defaults = {
 				min: 1,
-				max: 9999
+				max: 9999999
 			}
 			var opts = $.extend(defaults, options);
 			return this.each(function() {
 				var $this = $(this),
 					oldValue = $this.val();
-
+				
 				if(oldValue == "") oldValue = opts.min;
 				$this.on("keyup", function() {
 					var value = $this.val().replace(/[^0-9]/gi,"");
@@ -421,199 +286,79 @@ $(function(){
 			});
 		}, // fn_spinner
 
-		// fn_datepicker
-		fn_datepicker : function(options) {
-			var defaults = {};
-			var opts = $.extend(defaults, options);
-			return this.each(function() {
-				var $this = $(this),
-					btnImg = $this.attr("data-button"),
-					range = $this.attr("data-range"),
-					from = $this.attr("data-from"),
-					to = $this.attr("data-to"),
-					minDate, maxDate, $elm, optDate,
-					enableDates = opts.enableDates,
-					onSelect = opts.onSelect;
-
-				var dateOptions = {
-					showOtherMonths: true,
-					selectOtherMonths: true,
-					dateFormat: 'yy-mm-dd'
-				}
-
-				if(range !== undefined && $.trim(range) != "") {
-					var arrRange = range.split(",")
-					dateOptions.minDate = $.trim(arrRange[0]);
-					dateOptions.maxDate = $.trim(arrRange[1]);
-				}
-
-				if(btnImg === undefined || !btnImg) {
-					dateOptions.showOn = "both";
-					dateOptions.buttonImage = "../images/common/datepicker.png";
-					//dateOptions.buttonImageOnly = true;
-				}
-
-				if(to !== undefined && $.trim(to) != "") {
-					$elm = $(to);
-					optDate = "minDate";
-				}
-				if(from !== undefined && $.trim(from) != "") {
-					$elm = $(from);
-					optDate = "maxDate";
-				}
-				if($elm !== undefined) {
-					dateOptions.onClose = function(selectedDate) {
-						$elm.datepicker("option", optDate, selectedDate);
-					}
-				}
-
-				if(enableDates !== undefined) {
-					dateOptions.beforeShowDay = function(d) {
-						var dmy = d.getMonth() + 1;
-						if(d.getMonth() < 9) dmy = "0" + dmy;
-						dmy += "-";
-
-						if(d.getDate() < 10) dmy += "0";
-						dmy = d.getFullYear() + "-" + dmy + d.getDate();
-
-						if($.inArray(dmy, enableDates) != -1) {
-							return [true, "ui-datepicker-current-day"];
-						} else {
-							return [false, ""];
-						}
-					}
-				}
-
-				if(onSelect !== undefined) {
-					dateOptions.onSelect = onSelect;
-				}
-
-				$.datepicker.regional['ko'] = {
-					closeText: '닫기',
-					prevText: '이전달',
-					nextText: '다음달',
-					currentText: '오늘',
-					monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
-					monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
-					dayNames: ['일','월','화','수','목','금','토'],
-					dayNamesShort: ['일','월','화','수','목','금','토'],
-					dayNamesMin: ['일','월','화','수','목','금','토'],
-					weekHeader: 'Wk',
-					dateFormat: 'yy-mm-dd',
-					firstDay: 0,
-					isRTL: false,
-					showMonthAfterYear: true,
-					yearSuffix: '년'};
-
-				$.datepicker.setDefaults($.datepicker.regional['ko']);
-				$this.datepicker(dateOptions);
-			});
-		}, // fn_datepicker
-
-		//fn_order_fixed
 		fn_order_fixed : function(options){
-			var $doc = $(window),
-				$orderPym = $(this),
-				$footTop = $('.ui-footer').offset().top,
-				$headerHei = $('.ui-header').height(),
-				$leftCnt = $('.order_info_area').outerWidth(true);
-
-			$orderPym.attr('data-top', $headerHei).addClass('fixed');
-			$doc.on('scroll', function() {
-				var $scrlTop = $doc.scrollTop(),
-					_this = $orderPym,
-					_top = $headerHei + 165,
-					_h = _this.height(),
-					_css_t = (_top - $scrlTop),
-					_css_t = _css_t <= 0 ? 10 : _css_t,
-					_lap = ($footTop - $scrlTop) + 1102,
-					_this_end = (_h - _lap);
-
-				if(_this_end >= 0){
-					_this.css({
-						top: (_css_t - _this_end)
-					});
+			var $header = $('.payment_area'),
+				$container = $('.ui-container'),
+				$headerHei = $('.payment_area').height();
+			$(window).bind('scroll', function(){
+				if($(window).scrollTop()>=$headerHei/2){
+					$header.css({'position':'fixed','top':-$headerHei/2});
+					$container.css({'padding-top':$headerHei});
 				}else{
-					_this.css({
-						top: _css_t
-					});
+					$header.css({'position':'static','top':'0'});
+					$container.css({'padding-top':'0'});
 				}
 			});
+		},
 
-			function orderPymResize() {
-				if($doc.width() < 1100){
-					$orderPym.css({
-						'left': $leftCnt,
-						'margin-left' : '0'
-					})
-				}else{
-					$orderPym.css({
-						'left': '50%',
-						'margin-left' : '210px'
-					})
-				}
+		fn_customSelect : function(settings) {
+			var config = {
+				replacedClass: 'custom-select-replaced', // Class name added to replaced selects
+				customSelectClass: 'custom-select', // Class name of the (outer) inserted span element
+				activeClass: 'custom-select-isactive', // Class name assigned to the fake select when the real select is in hover/focus state
+				wrapperElement: '<div class="custom-select-container" />' // Element that wraps the select to enable positioning
+			};
+			if (settings) {
+				$.extend(config, settings);
 			}
 
-			$(window).on('resize', function(){
-				orderPymResize();
-			});
-			$(window).on('load', function(){
-				orderPymResize();
-			});
-		},//fn_order_fixed
-
-		//fn_order_tabs
-		fn_order_tabs: function(options){
-			var defaults = {};
-			var opts = $.extend(defaults, options);
-			return this.each(function(){
-				var $this = $(this),
-					$tabList = $this.children().children('.chkRd_box'),
-					$panel = $this.parent().parent().find('.tabs-panel').children('.panel-section'),
-					$current = $this.children('.current').index();
-
-				if($this.find('.tabs-panel')){
-					$panel.eq($current).show();
+			this.each(function () {
+				var select = $(this);
+				if (select.parent().hasClass('custom-select-container')) {
+					var par = select.parent();
+					val = par.find('option:selected', this).text();
+					par.find('.' + config.customSelectClass + ' span span').text(val);
+					return;
 				}
-
-				$tabList.each(function(){
-					if($(this).parent().hasClass('current')){
-						$(this).parent().siblings().addClass('none');
+				select.addClass(config.replacedClass);
+				select.wrap(config.wrapperElement);
+				var update = function () {
+					val = $('option:selected', this).text();
+					span.find('span span').text(val);
+				};
+				// Update the fake select when the real select’s value changes
+				select.change(update);
+				select.keyup(update);
+				var span = $('<span class="' + config.customSelectClass + '" aria-hidden="true"><span><span>' + $('option:selected', this).text() + '</span></span></span>');
+				select.after(span);
+				// Change class names to enable styling of hover/focus states
+				select.on({
+					mouseenter: function () {
+						span.addClass(config.activeClass);
+					},
+					mouseleave: function () {
+						span.removeClass(config.activeClass);
+					},
+					focus: function () {
+						span.addClass(config.activeClass);
+					},
+					blur: function () {
+						span.removeClass(config.activeClass);
+					},
+					change: function () {
+						span.removeClass(config.activeClass);
 					}
-
-					$(this).click(function(){
-						$(this).parent().addClass('current').siblings().removeClass('current');
-						if($(this).parent().hasClass('current')){
-							$tabList.parent().removeClass('none');
-							$(this).parent().siblings().addClass('none');
-						}
-
-						// 탭 컨텐츠 있을경우
-						if($this.next('.tabs-panel')){
-							var $tabIdx = $(this).parent().index();
-							$panel.hide().eq($tabIdx).show();
-						}
-					});
 				});
-
-				orderPymChk();
 			});
-		}, // fn_order_tabs
+		},
 	});
-
 
 	/* fn 선언 */
 	// gnb
 	$('.ui-header .nav').fn_gnb();
 
-	// allNav && search form
-	$('.ui-header').fn_exception();
-
 	// footer :: familySite
 	$('.familySite > a').fn_family();
-
-	// product list :: option select box
-	$('.prod-option-box .opt-select').fn_optionSelect();
 
 	// tab
 	$('.tabs-comp > ul').fn_tabs();
@@ -627,133 +372,80 @@ $(function(){
 		e.preventDefault();
 	});
 
-	// spinner :: 수량 카운트
+	// spinner 
 	$('.js-spinner').fn_spinner();
-
-	// datepicker
-	$(".js_datepicker").fn_datepicker();
 
 	// oder payment
 	$('.payment_area').fn_order_fixed();
 
-	// fn_ord_tabs
-	$('.payment_info > ul').fn_order_tabs();
+
+	$('.customized-select').fn_customSelect();
+
+
 });
 
 // function 호출 및 직접 선언
 $(function(){
-	//input file type
-	fileBox();
+	// check & radio custom
+	if($('input:radio').length>0 || $('input:checkbox').length>0){
+		$('input:radio').screwDefaultButtons({
+			image: 'url("../images/ico_rdo.png")',
+			width: 22,
+			height: 25
+		});
+		$('input:checkbox').screwDefaultButtons({
+			image: 'url("../images/ico_chk.png")',
+			width: 22,
+			height: 25
+		});
+	}
 
-	//faq
-	toggleList();
+	// css 호출
+	cssControls();
+
+	var $allChk = $('.all_chk').find('input:checkbox'),
+		$agrChk = $('.agr_chk').find('input:checkbox');
+
+	$allChk.change(function(){
+		var checkAll = $allChk.prop('checked');
+
+		if($allChk.prop('checked')){
+			$agrChk.prop('checked', true);
+			// $agrChk.screwDefaultButtons('check');
+			console.log('all_true1');
+		}else{
+			$agrChk.prop('checked', false);
+			// $agrChk.screwDefaultButtons('uncheck');
+			console.log('all_false1');
+		}
+	});
+
+	$agrChk.change(function(){
+		var $contentCk = true;
+		$agrChk.each(function(){
+			if($contentCk){
+				$contentCk = $(this).prop('checked');
+				if(!$contentCk){
+					$allChk.prop('checked', false);
+					// $allChk.screwDefaultButtons('uncheck');
+					console.log('all_false2');
+				}
+			}
+
+		});
+		if($contentCk){
+			$allChk.prop('checked', true);
+			// $allChk.screwDefaultButtons('check');
+			console.log('all_true2');
+		}
+	});
+
+
+
 });
 
-//order escrow check :: 주문/결제 :: 결제방식 Tab
-function orderPymChk(){
-	var $pymChk = $('.pym_tab .tab.chkRd_box').find('input:radio');
-	$escrowChk = $('.pym_tab .chk_escrow').find('input:checkbox');
-	$escrowCnts = $('.pym_cnts .cnts_section .escrow');
-	$depositChk = $('.pym_tab .chk_escrow').prev('.chkRd_box').find('input:radio'),
-		$taxChk = $('.pym_cnts .cnts_section .chkRd_box.tax_area').find('input:checkbox'),
-		$taxCntsInput = $('.tax_form').find('input');
-
-	$pymChk.on('click', function(){
-		$escrowChk.prop('checked', false);
-		$escrowCnts.removeClass('on');
-	});
-
-	$escrowChk.on('click', function () {
-		$escrowCnts.addClass('on');
-		$depositChk.click();
-
-		if($escrowChk.prop('checked') === false){
-			$escrowCnts.removeClass('on');
-		}
-		$depositChk.prop('checked', true);
-	});
-
-	$taxCntsInput.prop('disabled',true);
-
-	$taxChk.on('click', function(){
-		if($(this).prop('checked') === false){
-			$taxCntsInput.prop('disabled',true);
-		}else{
-			$taxCntsInput.prop('disabled', false);
-		}
-	});
+// 하위 브라우저 크로스 브라우징을 위한 css 컨트롤
+function cssControls(){
+	$('.product-list li:nth-child(4n+1)').addClass('clear-left');
 }
 
-//input file type
-function fileBox(){
-	var $fileBox = null;
-
-	$(function(){
-		init();
-	})
-
-	function init() {
-		$fileBox = $('.input-file');
-		fileLoad();
-	}
-
-	function fileLoad() {
-		$.each($fileBox, function(idx){
-			var $this = $fileBox.eq(idx),
-				$btnUpload = $this.find('[type="file"]'),
-				$label = $this.find('.file-label');
-
-			$btnUpload.on('change', function() {
-				var $target = $(this),
-					fileName = $target.val(),
-					$fileText = $target.siblings('.file-name');
-				$fileText.val(fileName);
-			})
-
-			$btnUpload.on('focusin focusout', function(e) {
-				e.type == 'focusin' ?
-					$label.addClass('file-focus') : $label.removeClass('file-focus');
-			})
-
-		})
-	}
-}
-
-//faq
-function toggleList(){
-	var $link = $('.toggle_list .question'),
-		$cnts = $('.toggle_list .answer');
-
-	$(document).on('click', '.toggle_list .question', function() {
-		var $tr = $(this).parents('tr');
-
-		$('.toggle_list tr').removeClass('current');
-		$cnts.css('display','none');
-
-		$tr.addClass('current');
-		$(this).next('.answer').css('display','block');
-	});
-}
-
-// 기획전 상세 :: 스크롤에 따른 box 컨트롤 :: 160623 디자인 이슈로 인한 삭제
-/*function _promotionFIX(){
- var $promBox = $('.prom-cont .box-list');
-
- if($promBox.length>0){
- var $boxList = $(">li", $promBox),
- $boxHei = $promBox.height(),
- $position = $promBox.position().top-20,
- $section = $promBox.parent().find('.product-section');
-
- // box
- $(window).bind('scroll', function(){
- if($(window).scrollTop()>=$position){
- $promBox.addClass('fix-box');
- $promBox.prev('.prom-edit').css({'margin-bottom':$boxHei+20});
- }else{
- $promBox.removeClass('fix-box');
- $promBox.prev('.prom-edit').css({'margin-bottom':'0'});
- }
- });
- }
- }*/

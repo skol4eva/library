@@ -72,15 +72,7 @@ input[type=text].bgnone, input[type=passowrd].bgnone{ background: #fff;}
 textarea {min-height:100px;width:100%;padding:20px;white-space:pre-line;border:1px solid #c6c6c6;color:#000;font-size:12px;line-height:22px;box-sizing: border-box}
 textarea:disabled,
 textarea:read-only{background-color: #f2f2f2;}
-select{ padding-left: 20px; border:1px solid #bbb;color:#000;font-size:12px;height:34px;line-height:34px;box-sizing:border-box;
-        -webkit-appearance: none;  /* 네이티브 외형 감추기 */
-        -moz-appearance: none;
-        appearance: none;
-        /*background: url('../images/ico_select.png') no-repeat 100% 50%;*/
-}
-select::-ms-expand { display: none; }
-div.selectbox { border:1px solid #ccc; background: url('../images/ico_select.png') 100% 50% no-repeat; width:120px; overflow:hidden; }
-div.selectbox select { border:none; background: transparent; width:110%; }
+
 
 
 /*.select-style {*/
@@ -776,3 +768,25 @@ div.selectbox select { border:none; background: transparent; width:110%; }
 .search_box.store + .search_box.store dt+dd+dt+dd{ position: absolute;top:25px;left:530px}
 .search_box.store + .search_box.store dd .chkRd_box{ display: inline-block; margin-left: 20px;}
 .search_box.store + .search_box.store dd .chkRd_box label{ font-size: 14px;}
+
+
+.customized-select.custom-select-replaced {
+        border: 0;
+        filter: alpha(opacity=0); /* Move to IE-specific CSS file if you want to. */
+        opacity: 0;
+        position: relative;
+        z-index: 10;
+}
+.custom-select-container{display: block;}
+.custom-select { display: block; left: 0; position: absolute; top: 0; z-index: 1; }
+.custom-select-container{position: relative;display: inline-block;}
+.custom-select-container > select{padding:0 20px 0 0;margin:0;border-width:0px;}
+.custom-select-container > select.w100{width:100%;}
+.custom-select-container > select > option{}
+.custom-select-container > span{display: inline-block;position: absolute;top:0;bottom:0;left:0;right:0;height:100%;}
+.custom-select > span {
+        display: block; box-sizing: border-box; line-height: W background-color: #fff; border:1px solid #c1c1c1; height: 100%;
+        filter: none;
+        background: url('https://www.pulmuoneha.com/pc/brand/images/common/ico_select02.png') no-repeat 90% center;
+        background: url('https://www.pulmuoneha.com/pc/brand/images/common/ico_select02.png') no-repeat right 0.6em center;}
+.custom-select span span { display: block; margin-left:10px;overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
