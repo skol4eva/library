@@ -75,12 +75,12 @@ $(function(){
 					$navBtn = $('.allNavBtn', $this),
 					$allNav = $('.allNav', $this),
 					$searchBtn = $('.srchBtn', $this)
-					$form = $('.searchForm', $this),
+				$form = $('.searchForm', $this),
 					_win = $(window),
 					_h = 100;;
 
 				$form.css({'top':-$form.height()});
-				$('body').click(function(e) { 
+				$('body').click(function(e) {
 					if(!$(e.target).closest($form).length && !$(e.target).is($form)){
 						if($form.is(":visible")){
 							$form.stop().animate({'top':-$form.height()});
@@ -142,9 +142,10 @@ $(function(){
 			return this.each(function(){
 				var $this = $(this),
 					$optBtn = $('>a', $this),
+					$optList = $this.find('ul'),
 					$parent = $optBtn.parent();
 
-				$('body').click(function(e) { 
+				$('body').click(function(e) {
 					if(!$(e.target).closest($parent).length && !$(e.target).is($parent)){
 						if($parent.is(":visible")){
 							$optBtn.removeClass('open');
@@ -162,6 +163,16 @@ $(function(){
 						$(this).addClass('open');
 					}
 					$optBox.toggle();
+				});
+
+				// option select :: text change
+				var _optList = $this.find('ul').children('li').children('a');
+				$optList.children().each(function(){
+					$(this).children().click(function(){
+						$(this).parents('.opt-select').children('a').text($(this).text());
+						$this.find('div').hide();
+						$optBtn.removeClass('open');
+					});
 				});
 
 				// opt-color
@@ -212,7 +223,7 @@ $(function(){
 				}
 
 				var $ending = $this.parent().find('.btn_st_03');
-					$ending.hide();
+				$ending.hide();
 
 				// 이벤트 페이지 :: 이벤트 종료시
 				var $end = $this.children('.current'),
@@ -386,7 +397,7 @@ $(function(){
 			return this.each(function() {
 				var $this = $(this),
 					oldValue = $this.val();
-				
+
 				if(oldValue == "") oldValue = opts.min;
 				$this.on("keyup", function() {
 					var value = $this.val().replace(/[^0-9]/gi,"");
@@ -435,7 +446,7 @@ $(function(){
 					dateOptions.minDate = $.trim(arrRange[0]);
 					dateOptions.maxDate = $.trim(arrRange[1]);
 				}
-				
+
 				if(btnImg === undefined || !btnImg) {
 					dateOptions.showOn = "both";
 					dateOptions.buttonImage = "../images/common/datepicker.png";
@@ -458,12 +469,12 @@ $(function(){
 
 				if(enableDates !== undefined) {
 					dateOptions.beforeShowDay = function(d) {
-						var dmy = d.getMonth() + 1; 
-						if(d.getMonth() < 9) dmy = "0" + dmy; 
-						dmy += "-"; 
+						var dmy = d.getMonth() + 1;
+						if(d.getMonth() < 9) dmy = "0" + dmy;
+						dmy += "-";
 
-						if(d.getDate() < 10) dmy += "0"; 
-						dmy = d.getFullYear() + "-" + dmy + d.getDate(); 
+						if(d.getDate() < 10) dmy += "0";
+						dmy = d.getFullYear() + "-" + dmy + d.getDate();
 
 						if($.inArray(dmy, enableDates) != -1) {
 							return [true, "ui-datepicker-current-day"];
@@ -493,7 +504,7 @@ $(function(){
 					isRTL: false,
 					showMonthAfterYear: true,
 					yearSuffix: '년'};
-					
+
 				$.datepicker.setDefaults($.datepicker.regional['ko']);
 				$this.datepicker(dateOptions);
 			});
@@ -631,48 +642,35 @@ $(function(){
 
 // function 호출 및 직접 선언
 $(function(){
-	// check & radio custom
-	if($('input:radio').length>0 || $('input:checkbox').length>0){
-		$('input:radio').screwDefaultButtons({
-			image: 'url("../images/ico_rdo.png")',
-			width: 22,
-			height: 25
-		});
-		$('input:checkbox').screwDefaultButtons({
-			image: 'url("../images/ico_chk.png")',
-			width: 22,
-			height: 25
-		});
-	}
-
-	//동의체크
-	allChk();
-
 	//input file type
 	fileBox();
+
+	//faq
+	toggleList();
 });
 
 //order escrow check :: 주문/결제 :: 결제방식 Tab
 function orderPymChk(){
 	var $pymChk = $('.pym_tab .tab.chkRd_box').find('input:radio');
-		$escrowChk = $('.pym_tab .chk_escrow').find('input:checkbox');
-		$escrowCnts = $('.pym_cnts .cnts_section .escrow');
-		$depositChk = $('.pym_tab .chk_escrow').prev('.chkRd_box').find('input:radio'),
+	$escrowChk = $('.pym_tab .chk_escrow').find('input:checkbox');
+	$escrowCnts = $('.pym_cnts .cnts_section .escrow');
+	$depositChk = $('.pym_tab .chk_escrow').prev('.chkRd_box').find('input:radio'),
 		$taxChk = $('.pym_cnts .cnts_section .chkRd_box.tax_area').find('input:checkbox'),
 		$taxCntsInput = $('.tax_form').find('input');
 
 	$pymChk.on('click', function(){
-		$escrowChk.screwDefaultButtons('uncheck');
+		$escrowChk.prop('checked', false);
 		$escrowCnts.removeClass('on');
 	});
 
 	$escrowChk.on('click', function () {
 		$escrowCnts.addClass('on');
 		$depositChk.click();
+
 		if($escrowChk.prop('checked') === false){
 			$escrowCnts.removeClass('on');
 		}
-		$depositChk.screwDefaultButtons('check');
+		$depositChk.prop('checked', true);
 	});
 
 	$taxCntsInput.prop('disabled',true);
@@ -682,34 +680,6 @@ function orderPymChk(){
 			$taxCntsInput.prop('disabled',true);
 		}else{
 			$taxCntsInput.prop('disabled', false);
-		}
-	});
-}
-
-//전체동의
-function allChk(){
-	var $allChk = $('.all_chk').find('input:checkbox'),
-		$agrChk = $('.agr_chk').find('input:checkbox');
-
-	$allChk.on('click', function(){
-		$agrChk.screwDefaultButtons('check');
-		if($allChk.prop('checked') === false){
-			$agrChk.screwDefaultButtons('uncheck');
-		}
-	});
-
-	$agrChk.on('click', function(){
-		var $contentCk = true;
-		$agrChk.each(function(){
-			if($contentCk){
-				$contentCk = $(this).prop('checked');
-				if(!$contentCk){
-					$allChk.screwDefaultButtons('uncheck');
-				}
-			}
-		});
-		if($contentCk){
-			$allChk.screwDefaultButtons('check');
 		}
 	});
 }
@@ -749,25 +719,41 @@ function fileBox(){
 	}
 }
 
+//faq
+function toggleList(){
+	var $link = $('.toggle_list .question'),
+		$cnts = $('.toggle_list .answer');
+
+	$(document).on('click', '.toggle_list .question', function() {
+		var $tr = $(this).parents('tr');
+
+		$('.toggle_list tr').removeClass('current');
+		$cnts.css('display','none');
+
+		$tr.addClass('current');
+		$(this).next('.answer').css('display','block');
+	});
+}
+
 // 기획전 상세 :: 스크롤에 따른 box 컨트롤 :: 160623 디자인 이슈로 인한 삭제
 /*function _promotionFIX(){
-	var $promBox = $('.prom-cont .box-list');
+ var $promBox = $('.prom-cont .box-list');
 
-	if($promBox.length>0){
-		var $boxList = $(">li", $promBox),
-			$boxHei = $promBox.height(),
-			$position = $promBox.position().top-20,
-			$section = $promBox.parent().find('.product-section');
+ if($promBox.length>0){
+ var $boxList = $(">li", $promBox),
+ $boxHei = $promBox.height(),
+ $position = $promBox.position().top-20,
+ $section = $promBox.parent().find('.product-section');
 
-		// box
-		$(window).bind('scroll', function(){
-			if($(window).scrollTop()>=$position){
-				$promBox.addClass('fix-box');
-				$promBox.prev('.prom-edit').css({'margin-bottom':$boxHei+20});
-			}else{
-				$promBox.removeClass('fix-box');
-				$promBox.prev('.prom-edit').css({'margin-bottom':'0'});
-			}
-		});
-	}
-}*/
+ // box
+ $(window).bind('scroll', function(){
+ if($(window).scrollTop()>=$position){
+ $promBox.addClass('fix-box');
+ $promBox.prev('.prom-edit').css({'margin-bottom':$boxHei+20});
+ }else{
+ $promBox.removeClass('fix-box');
+ $promBox.prev('.prom-edit').css({'margin-bottom':'0'});
+ }
+ });
+ }
+ }*/
