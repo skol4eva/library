@@ -1,0 +1,181 @@
+@charset "utf-8";
+
+/*
+	Author : IDR (2016.06)
+	Comment : layout.css
+	Modify : 
+*/
+
+.ui-wrap{min-width:1260px}
+
+/* top banner */
+.top-banner-slot{position:relative;margin:0 auto;max-width:1600px;overflow:hidden}
+.top-banner-slot button{display:block;width:24px;height:24px;position:absolute;top:50%;left:50%;margin:-12px 0 0 526px;background:url('../images/common/topBnrClose.png') no-repeat 0 0;line-height:999;overflow:hidden}
+.top-banner-slot .simple-banner{position:relative;top:0;left:50%;margin-left:-800px;width:1600px}
+
+/* header :: default - sub && 1260 */
+.ui-header{background:#d2232a;width:100%;z-index:10;position:relative;top:0;left:0;min-width:1260px;max-width:1600px;margin:0 auto}
+.ui-header .ui-inner{position:relative;min-width:1260px;max-width:1600px;margin:0 auto;padding-top:51px;min-height:49px;text-align:center}
+/* header :: logo */
+.ui-header h1{position:absolute;left:120px;bottom:25px}
+.ui-header h1 a{display:block;width:45px;height:20px;line-height:999;overflow:hidden;background:url('../images/common/top_spr.png') no-repeat -120px -40px}
+/* header :: all menu */
+.ui-header button.allNavBtn{position:absolute;bottom:0;left:0;width:100px;height:100px;line-height:999;overflow:hidden;background:#ad0407 url('../images/common/top_spr.png') no-repeat 0 0;z-index:1}
+.ui-header .allNav{position:absolute;display:none;left:50%;width:100%;background:#000;padding:23px 42px 40px;max-width:1516px;min-width:1178px}
+.ui-header .allNav .allNavClose{position:absolute;top:40px;right:44px;background:url('../images/common/allMenuClose.png') no-repeat 0 0;width:19px;height:19px;line-height:999;display:block;overflow:hidden}
+.ui-header .allNav h2{color:#d2232a;font-size:24px;font-weight:bold;margin-bottom:18px}
+.ui-header .allNav h2:after{content:'';display:inline-block;*display:inline;zoom:1;background:url('../images/common/allMenuTit.png') no-repeat 0 0;width:13px;height:13px;margin-left:10px}
+.ui-header .allNav ul li a{color:#999;font-size:14px;line-height:24px}
+.ui-header .allNav ul li a:hover{color:#fff;text-decoration:underline}
+.ui-header .allNav > ul{overflow:hidden}
+.ui-header .allNav > ul + ul{overflow:hidden;padding-top:30px;margin-top:30px;background:url('../images/common/allNav_dot.png') repeat-x 0 0;}
+.ui-header .allNav > ul + ul li{float:left}
+.ui-header .allNav > ul + ul li li{margin-right:25px}
+.ui-header .allNav > ul + ul li:last-child{width:auto}
+.ui-header .allNav > ul > li{float:left;width:14%}
+.ui-header .allNav > ul > li > a{font-size:18px;font-weight:bold;line-height:30px;margin-bottom:6px;display:inline-block;*display:inline;zoom:1;font-family:'Roboto'}
+.ui-header .allNav > div{overflow:hidden;padding-top:30px;margin-top:30px;background:url('../images/common/allNav_dot.png') repeat-x 0 0;}
+.ui-header .allNav > div div{float:left;width:42%}
+.ui-header .allNav div ul li{float:left;width:33%}
+.ui-header .allNav div ul li ul li{float:none;width:auto;}
+.ui-header .allNav div ul li ul li:before{content:'-';color:#999;margin:0 6px 0 1px}
+.ui-header .allNav div ul li ul li a{font-weight:normal;margin:0}
+.ui-header .allNav div + div{width:58%}
+.ui-header .allNav div + div ul li{width:24%}
+.ui-header .allNav div + div ul > li > a{font-weight:bold;display:inline-block;*display:inline;zoom:1;margin-bottom:6px}
+/* header :: search form */
+.ui-header button.srchBtn{position:absolute;bottom:0;right:0;z-index:1;display:block;width:100px;height:100px;line-height:999;overflow:hidden;background:#3b3b3b url('../images/common/top_spr.png') no-repeat 0 -100px;}
+.ui-header .searchForm{display:none;background:#3b3b3b;position:absolute;top:0;left:50%;width:100%;min-width:1260px;max-width:1600px;z-index:2;height:100px;overflow:hidden}
+/* header :: nav */
+.ui-header .nav{text-align:center;display:inline-block;*display:inline;zoom:1;vertical-align:top;margin-top:-13px}
+.ui-header .nav > li{display:inline-block;*display:inline;zoom:1;vertical-align:top;position:relative}
+.ui-header .nav > li > a{display:block;font-weight:bold;font-size:16px;line-height:24px;font-family:'Roboto';color:#fff;height:24px;padding:19px 0;overflow:hidden;position:relative}
+.ui-header .nav > li + li{margin-left:28px}
+.ui-header .nav > li > ul{position:absolute;top:62px;left:50%;margin-left:-75px;background:#fff;border:1px solid #d2232a;border-top:none;min-width:150px;padding:12px 0;text-align:left;display:none}
+.ui-header .nav > li > ul li{}
+.ui-header .nav > li > ul li a{display:block;font-size:14px;line-height:28px;color:#000;padding:0 20px}
+.ui-header .nav > li > ul li a:hover{background:#d2232a;color:#fff}
+.ui-header .utilNav{position:absolute;top:16px;right:120px}
+.ui-header .utilNav li{float:left;position:relative}
+.ui-header .utilNav li a{line-height:18px;display:inline-block;*display:inline;zoom:1;margin:7px 0;color:#fff}
+.ui-header .utilNav li a:hover{text-decoration:underline}
+.ui-header .utilNav li span{font-weight:bold}
+.ui-header .utilNav li + li{margin-left:12px}
+.ui-header .utilNav > li + li:before{content:'|';font-size:11px;color:#fff;padding-right:10px}
+.ui-header .utilNav li ul{position:absolute;top:32px;left:-12px;border:1px solid #000;background:#fff;padding:18px;min-width:69px;z-index:1;display:none}
+.ui-header .utilNav li ul li{float:none;text-align:left;line-height:20px}
+.ui-header .utilNav li ul li + li{margin:0}
+.ui-header .utilNav li ul li a{margin:0;color:#000;line-height:20px}
+.ui-header .utilNav li.on ul{display:block}
+.ui-header .utilNav .mypage > a:after{margin-left:8px;content:'';display:inline-block;*display:inline;zoom:1;width:7px;height:4px;background:url('../images/common/arr_mypage.png') no-repeat 0 -4px;vertical-align:top;margin-top:6px}
+.ui-header .utilNav .mypage.on > a:after{background-position:-7px -4px}
+.ui-header .utilNav .cart{overflow:hidden}
+.ui-header .utilNav .cart:before{content:'';padding:0}
+.ui-header .utilNav .cart a{display:block;width:32px;height:32px;line-height:999;overflow:hidden;background:url('../images/common/top_spr.png') no-repeat -152px -100px;margin:0;float:left}
+.ui-header .utilNav .cart span{display:block;float:left;line-height:32px;color:#fff;font-weight:bold;font-family:'Roboto';margin-left:10px}
+.ui-header .subNav{position:absolute;bottom:17px;right:120px}
+.ui-header .subNav li{float:left;line-height:24px}
+.ui-header .subNav li a{color:#fff;font-weight:bold;font-size:14px;opacity:0.7;filter:alpha(opacity=70);-ms-filter:"alpha(opacity=70)"}
+.ui-header .subNav li + li{margin-left:10px}
+.ui-header .subNav li + li:before{content:'/';margin-right:10px;color:#fff}
+.ui-header .subNav li + li + li a{color:#fff;opacity:1.0;filter:alpha(opacity=100);-ms-filter:"alpha(opacity=100)"}
+.ui-header .arr{width:17px;height:10px;background:url('../images/common/arrUp.png') no-repeat 50% 0;display:block;position:absolute;left:50%;margin-left:-8px;bottom:-10px}
+/* header :: scroll event */
+.ui-header.scrolled{position:fixed;top:-100px;left:50%}
+.ui-header.scrolled .ui-inner{padding-top:44px;min-height:40px}
+.ui-header.scrolled .searchForm{position:fixed}
+.ui-header.scrolled button.allNavBtn,
+.ui-header.scrolled button.srchBtn{height:60px}
+.ui-header.scrolled button.srchBtn{background-position:0 -120px}
+.ui-header.scrolled button.allNavBtn{background-position:0 -20px}
+.ui-header.scrolled h1{bottom:18px}
+.ui-header.scrolled .nav{margin-top:0}
+.ui-header.scrolled .nav > li > a{padding:16px 0}
+.ui-header.scrolled .nav > li > ul{top:56px}
+.ui-header.scrolled .utilNav{top:auto;bottom:14px}
+.ui-header.scrolled .utilNav li{display:none}
+.ui-header.scrolled .utilNav li.cart{display:block}
+.ui-header.scrolled .subNav{display:none}
+.ui-header.scrolled .allNav{position:fixed}
+/* header :: 1600 */
+.ui-header.max h1{left:140px}
+.ui-header.max .utilNav,
+.ui-header.max .subNav{right:140px}
+.ui-header.max.scrolled .utilNav{right:140px}
+/* header :: main :: color change */
+.main.ui-header{background:#fff}
+.main.ui-header .ui-inner{border-bottom:1px solid #ccc;padding-top:50px}
+.main.ui-header h1 a{background-position:-120px 0}
+.main.ui-header .nav li ul{border-color:#ccc}
+.main.ui-header .nav li a,
+.main.ui-header .utilNav li a,
+.main.ui-header .utilNav li + li:before{color:#000}
+.main.ui-header .utilNav .mypage > a:after{background-position:0 0}
+.main.ui-header .utilNav .mypage.on > a:after{background-position:-7px 0}
+.main.ui-header .utilNav .cart a{background-position:-120px -100px}
+.main.ui-header .utilNav .cart span{color:#d2232a}
+.main.ui-header .subNav li a{color:#000;opacity:1.0;filter:alpha(opacity=100);-ms-filter:"alpha(opacity=100)"}
+.main.ui-header .subNav li + li:before{color:#000}
+.main.ui-header .subNav li + li + li a{color:#d2232a}
+.main.ui-header .arr{background:url('../images/common/arrUp_red.png') no-repeat 50% 0;}
+.main.ui-header.scrolled .ui-inner{padding-top:43px}
+.main.ui-header button.allNavBtn, 
+.main.ui-header button.srchBtn{bottom:-1px}
+/* header :: placeholder */
+.ui-header ::-webkit-input-placeholder{color:#d7d7d7}
+.ui-header :-moz-placeholder{color:#d7d7d7;}
+.ui-header ::-moz-placeholder{color:#d7d7d7;}
+.ui-header :-ms-input-placeholder{color:#d7d7d7}
+
+/* container */
+.ui-container{}
+.ui-contents{width:1100px;margin:0 auto;padding:40px 0 80px}
+.ui-contents img{max-width:100%;max-height:100%}
+
+/* sub title */
+.ui-contents .title_area{ position: relative;padding-bottom:40px}
+.ui-contents .title_area2{ position: relative;padding-bottom:20px}
+.ui-contents .title_area .tlt_dpt01{ display: inline-block;font-size:30px; font-weight: bold;}
+.ui-contents .title_area .tlt_dpt02,
+.ui-contents .title_area2 .tlt_dpt02{ display: inline-block;padding-top: 40px;font-size:20px; font-weight: bold;}
+.ui-contents .title_area .sub_info,
+.ui-contents .title_area2 .sub_info{ position: absolute; bottom: 20px; right: 0; font-size: 12px;}
+.ui-contents .title_area2 .chkRd_box{ position: absolute;bottom: 15px;right:0}
+.ui-contents .title_area2 .chkRd_box label{ font-size: 12px;}
+.title-underline{margin-top:80px;font-size:18px;font-weight:bold;text-align:center;display:block;margin-bottom:15px;padding-bottom:19px;background:url('../images/promotion/prom-divider.jpg') no-repeat 50% 100%;font-family:'Roboto'}
+
+/* footer*/
+.ui-footer{min-width:1200px;max-width:1540px;margin:0 auto;padding:0 30px}
+.ui-footer .ui-inner{padding-top:8px;background:url('../images/common/f_pt.png') repeat-x 0 0}
+.ui-footer .f_nav{float:left;width:100%;padding-bottom:8px;background:url('../images/common/f_pt.png') repeat-x 0 100%;margin-bottom:30px}
+.ui-footer .f_nav > ul{float:left}
+.ui-footer .f_nav > ul li{float:left;line-height:18px;padding:17px 0}
+.ui-footer .f_nav > ul li a{color:#6b6b6b}
+.ui-footer .f_nav > ul li a:hover{text-decoration:underline}
+.ui-footer .f_nav > ul li + li{margin-left:10px}
+.ui-footer .f_nav > ul li + li:before{content:'/';margin-right:10px;font-size:8px;color:#000}
+.ui-footer .f_nav .familySite{float:right;position:relative}
+.ui-footer .f_nav .familySite > a{width:130px;background:url('../images/common/familyUp.png') no-repeat 100% 50%;font-weight:bold;font-family:'Roboto';color:#505050;text-indent:5px;display:block;line-height:52px}
+.ui-footer .f_nav .familySite > a.open{background:url('../images/common/familyDown.png') no-repeat 100% 50%}
+.ui-footer .f_nav .familySite ul{display:none;position:absolute;bottom:52px;right:0;background:#fff;padding:5px 0;border:1px solid #ddd;width:128px;max-height:150px}
+.ui-footer .f_nav .familySite ul li a{line-height:24px;color:#666;display:block;padding:0 5px}
+.ui-footer .f_nav .familySite ul li a:hover{background:#f2f2f2;color:#000}
+.ui-footer .f_content{overflow:hidden;position:relative;padding-bottom:30px;clear:both}
+.ui-footer .f_info{float:left}
+.ui-footer .f_info .f_logo{display:block;width:75px;height:12px;background:url('../images/common/k2_spr.png') no-repeat -64px -40px;line-height:999;overflow:hidden;margin-bottom:18px}
+.ui-footer .f_info > div{overflow:hidden}
+.ui-footer .f_info address,.ui-footer .f_info > div span{display:block;float:left;margin-right:15px;line-height:20px;color:#666}
+.ui-footer .f_info > div a{display:inline-block;*display:inline;zoom:1;color:#d2232a;line-height:20px;vertical-align:top}
+.ui-footer .f_info > div a:after{content:'  >';}
+.ui-footer .f_info > div a:hover{text-decoration:underline}
+.ui-footer .f_info .copy{color:#666;line-height:20px}
+.ui-footer .f_customer{float:right;margin-right:190px}
+.ui-footer .f_customer dt{display:block;margin-bottom:5px;font-family:'Roboto';font-weight:bold;color:#494949;}
+.ui-footer .f_customer dd{margin-bottom:7px;color:#666;font-size:24px;font-weight:bold;font-family:'Roboto';line-height:1;color:#494949;}
+.ui-footer .f_customer dd + dd{margin-bottom:3px;font-size:12px;font-weight:normal;line-height:18px;color:#666;font-family:'Nanum Square';}
+.ui-footer .f_sns{position:absolute;right:0;top:0}
+.ui-footer .f_sns li{float:left}
+.ui-footer .f_sns li a{display:block;width:26px;height:24px;line-height:999;overflow:hidden;background:url('../images/common/k2_spr.png') no-repeat -160px 0}
+.ui-footer .f_sns li + li a{background-position:-186px 0;margin-left:8px}
+.ui-footer .f_sns li + li + li a{background-position:-212px 0}
+.ui-footer .escro{position:absolute;top:53px;right:0}

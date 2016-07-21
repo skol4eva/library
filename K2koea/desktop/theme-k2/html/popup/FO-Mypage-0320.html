@@ -1,0 +1,61 @@
+<!-- layer -->
+<div class="dialog-cont" title="상품 문의하기" style="width:600px;">
+	<div class="brd_st_04">
+		<p class="required_msg st02"><em class="ico_req">필수입력</em>표시는 반드시 입력해야 하는 항목입니다.</p>
+		<div class="table_area brd_st_05 mt20">
+			<table class="tbl_style_02">
+				<caption>상품 문의하기 입력항목</caption>
+				<colgroup>
+					<col width="130px">
+					<col width="*">
+				</colgroup>
+				<tbody>
+				<tr>
+					<th><label for="qna_sbj">문의 제목<em class="ico_req">필수입력</em></label></th>
+					<td><input type="text" id="qna_sbj" value="랜덤발송 조건의 사은품을 원하는 상품으로 지정할 수 있나요? " style="width:100%;"></td>
+				</tr>
+				<tr>
+					<th><label for="qna_memo">문의 내용<em class="ico_req">필수입력</em></label></th>
+					<td>
+						<textarea name="" id="qna_memo" cols="30" rows="10" placeholder="20자 이상 등록해 주십시오." style="width: 440px;height: 100px;"> 언제 재입고 되나요? 꼭 사고 싶어요. </textarea>
+					</td>
+				</tr>
+				<tr>
+					<th>이미지</th>
+					<td>
+						<div class="input-file">
+							<input type="text" readonly="readonly" class="file-name" />
+							<label for="upload02" class="btn_st_03 file-label">찾아보기</label>
+							<input type="file" name="" id="upload02" class="file-upload" />
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th>답변수신</th>
+					<td>
+						<div class="cell">
+							<div class="chkRd_box">
+								<input type="checkbox" id="chk01" />
+								<label for="chk01">SMS 답변 수신</label>
+							</div>
+							<div class="chkRd_box">
+								<input type="checkbox" id="chk02" />
+								<label for="chk02">이메일 답변 수신</label>
+							</div>
+						</div>
+						<p class="guide_txt pt0">
+							<em class="msg">회원가입 시 등록하신 휴대폰과 이메일로 알람 및 답변을 발송합니다.</em>
+						</p>
+					</td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	<div class="btn_area">
+		<button class="btn_st_02" type="button" onclick="closeDialog()">확인</button>
+		<button class="btn_st_02 bg_gray" type="button" onclick="closeDialog()">취소</button>
+	</div>
+</div>
+<!-- //layer -->

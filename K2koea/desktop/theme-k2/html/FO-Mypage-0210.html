@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="pragma" content="no-cache"/>
+<meta http-equiv="Cache-Control" content="No-Cache"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=1, target-densitydpi=medium-dpi" />
+<title> 쿠폰내역 | 혜택정보 | 마이페이지 | K2 </title>
+
+<!-- CSS -->
+<link rel="stylesheet" type="text/css" href="../css/reset.css">
+<link rel="stylesheet" type="text/css" href="../css/k2-ui.css">
+
+<!-- JS -->
+<script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="../js/jquery-ui-1.11.2.min.js"></script>
+<script type="text/javascript" src="../js/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="../js/k2-ui.js"></script>
+
+<!-- 협업 작업을 위한 UI 배포 JS :: 개발엔 넘기지 말것 -->
+<script type="text/javascript" src="../js/include.js"></script>
+
+<!-- No Script -->
+<noscript>
+이 사이트의 기능을 모두 활용하기 위해서는 자바스크립트를 활성화 시킬 필요가 있습니다.<br />
+<a href="http://www.enable-javascript.com/ko/" target="_blank">브라우저에서 자바스크립트를 활성화하는 방법</a>을 참고 하세요.
+</noscript>
+</head>
+
+<body>
+	<div class="ui-wrap">
+		<!-- Include Skip -->
+		<script type="text/javascript">gf.inc.skip()</script>
+		
+		<!-- Include Header -->
+		<script type="text/javascript">gf.inc.head()</script>
+
+		<!-- ui-container -->
+		<div id="ui-container" class="ui-container">
+			<!-- ui-contents -->
+			<div class="ui-contents">
+				<div class="title_area brd_st_04">
+					<h3 class="tlt_dpt01">쿠폰내역</h3>
+					<div class="location">
+						<a href="#">HOME</a>
+						<a href="#">마이페이지</a>
+						<a href="#">혜택정보</a>
+						<a href="#" class="current">쿠폰내역</a>
+					</div>
+				</div>
+
+				<div class="inner-contents">
+					<div class="lnb_wrap">
+						<ul class="depth01">
+							<li>
+								<div>
+									<a href="FO-Mypage-0040.html">주문정보</a>
+									<ul class="depth02">
+										<li><a href="FO-Mypage-0040.html">전체 주문관리</a></li>
+										<li><a href="FO-Mypage-0200.html">위시리스트</a></li>
+									</ul>
+								</div>
+							</li>
+							<li class="on">
+								<div>
+									<a href="FO-Mypage-0210.html" class="1depth">혜택정보</a>
+									<ul class="depth02">
+										<li class="on"><a href="FO-Mypage-0210.html">쿠폰내역</a></li>
+										<li><a href="FO-Mypage-0230.html">마일리지 내역</a></li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<div>
+									<a href="FO-Mypage-0240.html">나의 활동</a>
+									<ul class="depth02">
+										<li><a href="FO-Mypage-0240.html">1:1문의</a></li>
+										<li><a href="FO-Mypage-0270.html">상품리뷰</a></li>
+										<li><a href="FO-Mypage-0320.html">상품문의</a></li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<div>
+									<a href="FO-Mypage-0330.html">회원정보</a>
+									<ul class="depth02">
+										<li><a href="FO-Mypage-0340.html">배송지 관리</a></li>
+										<li><a href="FO-Mypage-0370.html">비밀번호 변경</a></li>
+										<li><a href="FO-Mypage-0380.html">회원정보 변경</a></li>
+										<li><a href="FO-Mypage-0390.html">회원탈퇴</a></li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+
+						<div class="lnb_call">
+							<p class="font-en"><strong>CUSTOMER CENTER</strong></p>
+							<p class="tel">1644-7781</p>
+							<p class="font-en"><strong>09:00~18:00</strong> <span>토,일, 공휴일 휴무</span></p>
+							<p class="font-en"><strong>12:30~13:30</strong> <span>점심(상담불가)</span></p>
+							<a href="FO-CS-0020.html" class="btn_st_02">FAQ</a>
+						</div>
+					</div>
+
+					<div class="cnts_wrap">
+						<div class="mp_coupon">
+							<div class="search_box src_date">
+								<div class="month_btn tabs-comp">
+									<ul>
+										<li class="current"><a href="#self">1주일</a></li>
+										<li><a href="#self">1개월</a></li>
+										<li><a href="#self">3개월</a></li>
+										<li><a href="#self">6개월</a></li>
+									</ul>
+								</div>
+								<div class="date">
+									<input type="text" id="startDate" class="bgnone js_datepicker" readonly="readonly">
+									<span>~</span>
+									<input type="text" id="endDate" class="bgnone js_datepicker" readonly="readonly">
+									<button type="button" class="btn_st_02 search">조회하기</button>
+								</div>
+							</div>
+
+							<div class="title_area2">
+								<h4 class="tlt_dpt02">보유 쿠폰목록 00건</h4>
+								<select name="" id="">
+									<option value="">사용가능</option>
+									<option value="">사용완료</option>
+									<option value="">기간만료</option>
+									<option value="">전체</option>
+								</select>
+							</div>
+
+							<div class="table_area">
+								<table class="tbl_style_07">
+									<caption>보유 쿠폰 목록</caption>
+									<colgroup>
+										<col width="90px">
+										<col width="*">
+										<col width="135px">
+										<col width="110px">
+										<col width="120px">
+										<col width="130px">
+									</colgroup>
+									<thead>
+									<tr>
+										<th>구분</th>
+										<th>쿠폰명</th>
+										<th>혜택</th>
+										<th>상세조건</th>
+										<th>유효기간</th>
+										<th>사용여부</th>
+									</tr>
+									</thead>
+									<tbody>
+									<tr>
+										<td>20% 할인</td>
+										<td class="al">
+											<p class="cp_title">바람막이 상품 구매 시 20% 할인</p>
+											<p class="cp_date">[다운로드 기간 :  2016-06-15 ~ 2016-11-14]</p>
+										</td>
+										<td>20%</td>
+										<td><a href="javascript:;" class="btn_st_03 js-dialog" data-href="./popup/FO-Mypage-0220.html">상세조건</a></td>
+										<td>발행일로부터 7일</td>
+										<td><a href="#;" class="btn_st_04 bg_gray">다운로드</a></td>
+									</tr>
+									<tr>
+										<td>사은품</td>
+										<td class="al">
+											<p class="cp_title">레스큐 일석이조 이벤트</p>
+										</td>
+										<td>키즈스노쿨</td>
+										<td><a href="javascript:;" class="btn_st_03 js-dialog" data-href="./popup/FO-Mypage-0220.html">상세조건</a></td>
+										<td>2016-06-15 ~ 2016-11-14</td>
+										<td>사용가능</td>
+									</tr>
+									<tr>
+										<td>20% 할인</td>
+										<td class="al">
+											<p class="cp_title">신규고객 첫 구매 감사 쿠폰</p>
+										</td>
+										<td>10,000원</td>
+										<td><a href="javascript:;" class="btn_st_03 js-dialog" data-href="./popup/FO-Mypage-0220.html">상세조건</a></td>
+										<td>2016-06-15 ~ 2016-11-14</td>
+										<td>사용가능</td>
+									</tr>
+									<tr>
+										<td>20% 할인</td>
+										<td class="al">
+											<p class="cp_title">바람막이 상품 구매 시 20% 할인</p>
+											<p class="cp_date">[다운로드 기간 :  2016-06-15 ~ 2016-11-14]</p>
+										</td>
+										<td>20%</td>
+										<td><a href="javascript:;" class="btn_st_03 js-dialog" data-href="./popup/FO-Mypage-0220.html">상세조건</a></td>
+										<td>발행일로부터 7일</td>
+										<td><a href="#;" class="btn_st_04 bg_gray">다운로드</a></td>
+									</tr>
+									<tr>
+										<td>사은품</td>
+										<td class="al">
+											<p class="cp_title">레스큐 일석이조 이벤트</p>
+										</td>
+										<td>키즈스노쿨</td>
+										<td><a href="javascript:;" class="btn_st_03 js-dialog" data-href="./popup/FO-Mypage-0220.html">상세조건</a></td>
+										<td>2016-06-15 ~ 2016-11-14</td>
+										<td>사용가능</td>
+									</tr>
+									<tr>
+										<td>20% 할인</td>
+										<td class="al">
+											<p class="cp_title">신규고객 첫 구매 감사 쿠폰</p>
+										</td>
+										<td>10,000원</td>
+										<td><a href="javascript:;" class="btn_st_03 js-dialog" data-href="./popup/FO-Mypage-0220.html">상세조건</a></td>
+										<td>2016-06-15 ~ 2016-11-14</td>
+										<td>사용가능</td>
+									</tr>
+									<tr>
+										<td>20% 할인</td>
+										<td class="al">
+											<p class="cp_title">바람막이 상품 구매 시 20% 할인</p>
+											<p class="cp_date">[다운로드 기간 :  2016-06-15 ~ 2016-11-14]</p>
+										</td>
+										<td>20%</td>
+										<td><a href="javascript:;" class="btn_st_03 js-dialog" data-href="./popup/FO-Mypage-0220.html">상세조건</a></td>
+										<td>발행일로부터 7일</td>
+										<td><a href="#;" class="btn_st_04 bg_gray">다운로드</a></td>
+									</tr>
+									</tbody>
+								</table>
+							</div>
+
+							<!-- paginationBar :: 기존 컴포넌트 유지 -->
+							<div class="paginationBar">
+								<div class="right">
+									<ul class="pagination">
+										<li class="first"><a href="#self" rel="first">&raquo;</a></li>
+										<li class="prev"><a href="#self" rel="prev">Next Page</a></li>
+										<li><strong>1</strong></li>
+										<li><a href="#self">2</a></li>
+										<li><a href="#self">3</a></li>
+										<li><a href="#self">4</a></li>
+										<li><a href="#self">5</a></li>
+										<li><a href="#self">6</a></li>
+										<li><a href="#self">7</a></li>
+										<li><a href="#self">8</a></li>
+										<li><a href="#self">9</a></li>
+										<li><a href="#self">10</a></li>
+										<li class="next"><a href="#self" rel="next">Next Page</a></li>
+										<li class="last"><a href="#self" rel="last">&raquo;</a></li>
+									</ul>
+								</div>
+							</div>
+							<!-- //paginationBar -->
+
+							<ul class="list_01 mt40">
+								<li>발급된 쿠폰은 온라인 쇼핑몰에서만 사용 가능합니다.</li>
+								<li>취소/교환/반품하신 경우 적용된 쿠폰은 다시 사용하실 수 없습니다.</li>
+								<li>다운로드 쿠폰은 다운로드를 받으셔야 사용가능하며 다운로드 기간이 지나면 다운로드 받으실 수 없습니다.</li>
+								<li>쿠폰내역은 6개월 이상 조회하실 수 없습니다.  </li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //ui-contents -->
+		</div>
+		<!-- //ui-container -->
+
+		<!-- Include Footer -->
+		<script type="text/javascript">gf.inc.foot()</script>
+	</div>
+</body>
+</html>

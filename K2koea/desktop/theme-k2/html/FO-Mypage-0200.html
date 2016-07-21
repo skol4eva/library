@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="pragma" content="no-cache"/>
+<meta http-equiv="Cache-Control" content="No-Cache"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=1, target-densitydpi=medium-dpi" />
+<title> 위시리스트 | 주문정보 | 마이페이지 | K2 </title>
+
+<!-- CSS -->
+<link rel="stylesheet" type="text/css" href="../css/reset.css">
+<link rel="stylesheet" type="text/css" href="../css/k2-ui.css">
+
+<!-- JS -->
+<script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="../js/jquery-ui-1.11.2.min.js"></script>
+<script type="text/javascript" src="../js/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="../js/k2-ui.min.js"></script>
+
+<!-- 협업 작업을 위한 UI 배포 JS :: 개발엔 넘기지 말것 -->
+<script type="text/javascript" src="../js/include.js"></script>
+
+<!-- No Script -->
+<noscript>
+이 사이트의 기능을 모두 활용하기 위해서는 자바스크립트를 활성화 시킬 필요가 있습니다.<br />
+<a href="http://www.enable-javascript.com/ko/" target="_blank">브라우저에서 자바스크립트를 활성화하는 방법</a>을 참고 하세요.
+</noscript>
+</head>
+
+<body>
+	<div class="ui-wrap">
+		<!-- Include Skip -->
+		<script type="text/javascript">gf.inc.skip()</script>
+		
+		<!-- Include Header -->
+		<script type="text/javascript">gf.inc.head()</script>
+
+		<!-- ui-container -->
+		<div id="ui-container" class="ui-container">
+			<!-- ui-contents -->
+			<div class="ui-contents">
+				<div class="title_area brd_st_04">
+					<h3 class="tlt_dpt01">위시리스트</h3>
+					<div class="location">
+						<a href="#">HOME</a>
+						<a href="#">마이페이지</a>
+						<a href="#">주문정보</a>
+						<a href="#" class="current">위시리스트</a>
+					</div>
+				</div>
+
+				<div class="inner-contents">
+					<div class="lnb_wrap">
+						<ul class="depth01">
+							<li class="on">
+								<div>
+									<a href="FO-Mypage-0040.html">주문정보</a>
+									<ul class="depth02">
+										<li><a href="FO-Mypage-0040.html">전체 주문관리</a></li>
+										<li class="on"><a href="FO-Mypage-0200.html">위시리스트</a></li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<div>
+									<a href="FO-Mypage-0210.html" class="1depth">혜택정보</a>
+									<ul class="depth02">
+										<li><a href="FO-Mypage-0210.html">쿠폰내역</a></li>
+										<li><a href="FO-Mypage-0230.html">마일리지 내역</a></li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<div>
+									<a href="FO-Mypage-0240.html">나의 활동</a>
+									<ul class="depth02">
+										<li><a href="FO-Mypage-0240.html">1:1문의</a></li>
+										<li><a href="FO-Mypage-0270.html">상품리뷰</a></li>
+										<li><a href="FO-Mypage-0320.html">상품문의</a></li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<div>
+									<a href="FO-Mypage-0330.html">회원정보</a>
+									<ul class="depth02">
+										<li><a href="FO-Mypage-0340.html">배송지 관리</a></li>
+										<li><a href="FO-Mypage-0370.html">비밀번호 변경</a></li>
+										<li><a href="FO-Mypage-0380.html">회원정보 변경</a></li>
+										<li><a href="FO-Mypage-0390.html">회원탈퇴</a></li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+
+						<div class="lnb_call">
+							<p class="font-en"><strong>CUSTOMER CENTER</strong></p>
+							<p class="tel">1644-7781</p>
+							<p class="font-en"><strong>09:00~18:00</strong> <span>토,일, 공휴일 휴무</span></p>
+							<p class="font-en"><strong>12:30~13:30</strong> <span>점심(상담불가)</span></p>
+							<a href="FO-CS-0020.html" class="btn_st_02">FAQ</a>
+						</div>
+					</div>
+
+					<div class="cnts_wrap">
+						<div class="table_area">
+							<table class="tbl_style_03 wishlist">
+								<caption>장바구니 목록</caption>
+								<colgroup>
+									<col width="62px">
+									<col width="*">
+									<col width="120px">
+									<col width="120px">
+									<col width="140px">
+								</colgroup>
+								<thead>
+								<tr>
+									<th>
+										<div class="chkRd_box no_label">
+											<input type="checkbox" id="chk01" />
+											<label for="chk01">전체선택</label>
+										</div>
+									</th>
+									<th>상품정보</th>
+									<th>상품가격</th>
+									<th>마일리지</th>
+									<th>주문/삭제</th>
+								</tr>
+								</thead>
+								<tbody>
+								<tr>
+									<td>
+										<div class="chkRd_box no_label">
+											<input type="checkbox" id="chk01_1" />
+											<label for="chk01_1">선택</label>
+										</div>
+									</td>
+									<td>
+										<div class="cart_prd">
+											<a href="#" class="thumb_img">
+												<img src="../images/cart_thumb_img.jpg" alt="제품명">
+											</a>
+											<div class="prd_info">
+												<p class="evt_txt">이벤트 특가상품</p>
+												<p class="prd_name"><a href="#">남성용 플라이워크 후드 자켓</a><span class="sold_out">[품절]</span></p>
+												<p class="prd_opt">
+													<span class="opt">색상 : <span>그레이</span></span>
+													<span class="opt">사이즈 : <span>100</span></span>
+													<!-- 옵션변경(2차범위) -->
+													<a href="javascript:;" class="btn_st_03 js-dialog" data-href="./popup/FO-Order-0020.html">옵션변경</a>
+												</p>
+											</div>
+										</div>
+									</td>
+									<td><span class="cart_num price font-en">48,000 <span class="prc_mark">W</span></span></td>
+									<td><span class="cart_num mileage font-en">48,000 <span class="prc_mark">M</span></span></td>
+									<td>
+										<div class="cart_btn_area">
+											<button class="btn_st_04">장바구니</button>
+											<button class="btn_st_04 bg_gray">삭제</button>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div class="chkRd_box no_label">
+											<input type="checkbox" id="chk01_2" />
+											<label for="chk01_2">선택</label>
+										</div>
+									</td>
+									<td>
+										<div class="cart_prd">
+											<a href="#" class="thumb_img">
+												<img src="../images/cart_thumb_img.jpg" alt="제품명">
+												<span class="sold_out">품절</span>
+											</a>
+											<div class="prd_info">
+												<p class="evt_txt">이벤트 특가상품</p>
+												<p class="prd_name"><a href="#">남성용 플라이워크 후드 자켓</a><span class="sold_out">[품절]</span></p>
+												<p class="prd_opt">
+													<span class="opt">색상 : <span>그레이</span></span>
+													<span class="opt">사이즈 : <span>100</span></span>
+												</p>
+											</div>
+										</div>
+									</td>
+									<td><span class="cart_num price font_en">48,000 <span class="prc_mark">W</span></span></td>
+									<td><span class="cart_num mileage font_en">48,000 <span class="prc_mark">M</span></span></td>
+									<td>
+										<div class="cart_btn_area">
+											<button class="btn_st_04">장바구니</button>
+											<button class="btn_st_04 bg_gray">삭제</button>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div class="chkRd_box no_label">
+											<input type="checkbox" id="chk01_3" />
+											<label for="chk01_3">선택</label>
+										</div>
+									</td>
+									<td>
+										<div class="cart_prd">
+											<a href="#" class="thumb_img">
+												<img src="../images/cart_thumb_img.jpg" alt="제품명">
+												<span class="deal font-en">K-DEAL</span>
+											</a>
+											<div class="prd_info">
+												<p class="evt_txt">이벤트 특가상품</p>
+												<p class="prd_name"><a href="#">남성용 플라이워크 후드 자켓</a><span class="sold_out">[품절]</span></p>
+												<p class="prd_opt">
+													<span class="opt">색상 : <span>그레이</span></span>
+													<span class="opt">사이즈 : <span>100</span></span>
+												</p>
+											</div>
+										</div>
+									</td>
+									<td><span class="cart_num price font_en">48,000 <span class="prc_mark">W</span></span></td>
+									<td><span class="cart_num mileage font_en">48,000 <span class="prc_mark">M</span></span></td>
+									<td>
+										<div class="cart_btn_area">
+											<button class="btn_st_04">장바구니</button>
+											<button class="btn_st_04 bg_gray">삭제</button>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="6" class="cart_no_item">
+										<p>장바구니에 담은 상품이 없습니다.</p>
+									</td>
+								</tr>
+								</tbody>
+							</table>
+							<div class="btn_area al cart">
+
+							</div>
+						</div>
+
+						<!-- paginationBar :: 기존 컴포넌트 유지 -->
+						<div class="paginationBar btn_mp">
+							<button class="btn_st_02 bg_red">선택삭제</button>
+							<div class="right">
+								<ul class="pagination">
+									<li class="first"><a href="#self" rel="first">&raquo;</a></li>
+									<li class="prev"><a href="#self" rel="prev">Next Page</a></li>
+									<li><strong>1</strong></li>
+									<li><a href="#self">2</a></li>
+									<li><a href="#self">3</a></li>
+									<li><a href="#self">4</a></li>
+									<li><a href="#self">5</a></li>
+									<li><a href="#self">6</a></li>
+									<li><a href="#self">7</a></li>
+									<li><a href="#self">8</a></li>
+									<li><a href="#self">9</a></li>
+									<li><a href="#self">10</a></li>
+									<li class="next"><a href="#self" rel="next">Next Page</a></li>
+									<li class="last"><a href="#self" rel="last">&raquo;</a></li>
+								</ul>
+							</div>
+						</div>
+						<!-- //paginationBar -->
+						
+						<ul class="list_01 mt40">
+							<li>고객님께서 관심을 갖고 있는 상품을 담아 확인하실 수 있습니다.</li>
+							<li>장바구니에 담으시려면 상품 색상, 사이즈, 수량을 선택 후 담으실 수 있습니다.</li>
+							<li>품절된 상품은 장바구니에 담으실 수 없습니다.</li>
+							<li>위시리스트 상품은 최대 6개월간 보관되며 그 이후 자동 삭제됩니다.</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- //ui-contents -->
+		</div>
+		<!-- //ui-container -->
+
+		<!-- Include Footer -->
+		<script type="text/javascript">gf.inc.foot()</script>
+	</div>
+</body>
+</html>
