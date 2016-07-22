@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="pragma" content="no-cache"/>
+<meta http-equiv="Cache-Control" content="No-Cache"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=1, target-densitydpi=medium-dpi" />
+<title> 주문취소 | 전체 주문관리 | 주문정보 | 마이페이지 | K2 </title>
+
+<!-- CSS -->
+<link rel="stylesheet" type="text/css" href="../css/reset.css">
+<link rel="stylesheet" type="text/css" href="../css/k2-ui.css">
+
+<!-- JS -->
+<script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="../js/jquery-ui-1.11.2.min.js"></script>
+<script type="text/javascript" src="../js/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="../js/k2-ui.js"></script>
+
+<!-- 협업 작업을 위한 UI 배포 JS :: 개발엔 넘기지 말것 -->
+<script type="text/javascript" src="../js/include.js"></script>
+
+<!-- No Script -->
+<noscript>
+이 사이트의 기능을 모두 활용하기 위해서는 자바스크립트를 활성화 시킬 필요가 있습니다.<br />
+<a href="http://www.enable-javascript.com/ko/" target="_blank">브라우저에서 자바스크립트를 활성화하는 방법</a>을 참고 하세요.
+</noscript>
+</head>
+
+<body>
+	<div class="ui-wrap">
+		<!-- Include Skip -->
+		<script type="text/javascript">gf.inc.skip()</script>
+		
+		<!-- Include Header -->
+		<script type="text/javascript">gf.inc.head()</script>
+
+		<!-- ui-container -->
+		<div id="ui-container" class="ui-container">
+			<!-- ui-contents -->
+			<div class="ui-contents">
+				<div class="title_area brd_st_04">
+					<h3 class="tlt_dpt01">주문취소</h3>
+					<div class="location">
+						<a href="#">HOME</a>
+						<a href="#">마이페이지</a>
+						<a href="#">주문정보</a>
+						<a href="#">전체 주문관리</a>
+						<a href="#" class="current">주문취소</a>
+					</div>
+				</div>
+
+				<div class="inner-contents">
+					<div class="lnb_wrap">
+						<ul class="depth01">
+							<li>
+								<div>
+									<a href="FO-Mypage-0040.html">주문정보</a>
+									<ul class="depth02">
+										<li><a href="FO-Mypage-0040.html">전체 주문관리</a></li>
+										<li><a href="FO-Mypage-0200.html">위시리스트</a></li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<div>
+									<a href="FO-Mypage-0210.html" class="1depth">혜택정보</a>
+									<ul class="depth02">
+										<li><a href="FO-Mypage-0210.html">쿠폰내역</a></li>
+										<li><a href="FO-Mypage-0230.html">마일리지 내역</a></li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<div>
+									<a href="FO-Mypage-0240.html">나의 활동</a>
+									<ul class="depth02">
+										<li><a href="FO-Mypage-0240.html">1:1문의</a></li>
+										<li><a href="FO-Mypage-0270.html">상품리뷰</a></li>
+										<li><a href="FO-Mypage-0320.html">상품문의</a></li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<div>
+									<a href="FO-Mypage-0330.html">회원정보</a>
+									<ul class="depth02">
+										<li><a href="FO-Mypage-0340.html">배송지 관리</a></li>
+										<li><a href="FO-Mypage-0370.html">비밀번호 변경</a></li>
+										<li><a href="FO-Mypage-0380.html">회원정보 변경</a></li>
+										<li><a href="FO-Mypage-0390.html">회원탈퇴</a></li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+
+						<div class="lnb_call">
+							<p class="font-en"><strong>CUSTOMER CENTER</strong></p>
+							<p class="tel">1644-7781</p>
+							<p class="font-en"><strong>09:00~18:00</strong> <span>토,일, 공휴일 휴무</span></p>
+							<p class="font-en"><strong>12:30~13:30</strong> <span>점심(상담불가)</span></p>
+							<a href="FO-CS-0020.html" class="btn_st_02">FAQ</a>
+						</div>
+					</div>
+
+					<div class="cnts_wrap">
+						<div class="mp_order_number">
+							<div>
+								<dl>
+									<dt>주문번호</dt>
+									<dd>K606221559737</dd>
+								</dl>
+								<dl>
+									<dt>주문일시</dt>
+									<dd>2016-06-23  18:30 </dd>
+								</dl>
+							</div>
+						</div>
+
+						<div class="table_area">
+							<table class="tbl_style_03 mp_cancel_list">
+								<caption>주문 취소 목록</caption>
+								<colgroup>
+									<col width="62px">
+									<col width="*">
+									<col width="100px">
+									<col width="120px">
+									<col width="120px">
+									<col width="120px">
+								</colgroup>
+								<thead>
+								<tr>
+									<th>
+										<div class="chkRd_box no_label">
+											<input type="checkbox" id="chk01" />
+											<label for="chk01">전체선택</label>
+										</div>
+									</th>
+									<th>상품정보</th>
+									<th>할인</th>
+									<th>주문가격</th>
+									<th>취소수량</th>
+									<th>주문상태</th>
+								</tr>
+								</thead>
+								<tbody>
+								<tr>
+									<td>
+										<div class="chkRd_box no_label">
+											<input type="checkbox" id="chk01_1" />
+											<label for="chk01_1">선택</label>
+										</div>
+									</td>
+									<td class="product">
+										<div class="cart_prd">
+											<a href="#" class="thumb_img">
+												<img src="../images/cart_thumb_img.jpg" alt="제품명">
+											</a>
+											<div class="prd_info">
+												<p class="evt_txt">이벤트 특가상품</p>
+												<p class="prd_name"><a href="#">남성용 플라이워크 후드 자켓 남성용 플라이워크 후드 자켓</a></p>
+												<p class="prd_opt">
+													<span class="opt">색상 : <span>그레이</span></span>
+													<span class="opt">사이즈 : <span>100</span></span>
+												</p>
+											</div>
+										</div>
+									</td>
+									<td><span class="cart_num price font-en">3,300 <span class="prc_mark">W</span></span></td>
+									<td><span class="cart_num mileage font-en">00,236,700 <span class="prc_mark">W</span></span></td>
+									<td class="qty">
+										<select name="" id="" style="width:90px">
+											<option value="">1</option>
+											<option value="">1</option>
+										</select>
+									</td>
+									<td class="status">결제완료</td>
+								</tr>
+								<tr>
+									<td>
+										<div class="chkRd_box no_label">
+											<input type="checkbox" id="chk01_1" />
+											<label for="chk01_1">선택</label>
+										</div>
+									</td>
+									<td class="product">
+										<div class="cart_prd">
+											<a href="#" class="thumb_img">
+												<img src="../images/cart_thumb_img.jpg" alt="제품명">
+											</a>
+											<div class="prd_info">
+												<p class="evt_txt">이벤트 특가상품</p>
+												<p class="prd_name"><a href="#">남성용 플라이워크 후드 자켓</a></p>
+												<p class="prd_opt">
+													<span class="opt">색상 : <span>그레이</span></span>
+													<span class="opt">사이즈 : <span>100</span></span>
+												</p>
+											</div>
+										</div>
+									</td>
+									<td><span class="cart_num price font-en">3,300 <span class="prc_mark">W</span></span></td>
+									<td><span class="cart_num mileage font-en">00,236,700 <span class="prc_mark">W</span></span></td>
+									<td class="qty">
+										<select name="" id="" style="width:90px">
+											<option value="">1</option>
+											<option value="">1</option>
+										</select>
+									</td>
+									<td class="status">결제완료</td>
+								</tr>
+								</tbody>
+							</table>
+							<div class="btn_area">
+								<button type="button" class="btn_st_01">계산하기</button>
+							</div>
+						</div>
+
+						<div class="title_area2">
+							<h4 class="tlt_dpt02">환불정보</h4>
+						</div>
+						<div class="mp_exchange_price">
+							<div class="inner_box">
+								<dl class="details">
+									<dt>상품가격</dt>
+									<dd>480,000 W</dd>
+									<dt>수량</dt>
+									<dd>2</dd>
+									<dt>배송비</dt>
+									<dd>0 W</dd>
+								</dl>
+								<dl class="total">
+									<dt>취소상품 합계</dt>
+									<dd>480,000 <span>W</span></dd>
+								</dl>
+							</div>
+							<p class="ico minus">minus</p>
+							<div class="inner_box">
+								<dl class="details">
+									<dt>쿠폰</dt>
+									<dd>
+										-6,700 W
+										<p class="coupon">(5만원 구매시 1만원 할인 / 5만원 구매시 1만원 할인 / 5만원)</p>
+									</dd>
+									<dt>마일리지</dt>
+									<dd>0 M</dd>
+									<dt>추가 배송비</dt>
+									<dd>0 W</dd>
+								</dl>
+								<dl class="total">
+									<dt scope="row">차감 합계</dt>
+									<dd>6,700 <span>W</span></dd>
+								</dl>
+							</div>
+							<p class="ico equals">equals</p>
+							<div class="inner_box cancel_total">
+								<dl>
+									<dt>결제 취소금액</dt>
+									<dd>473,740 <span>W</span></dd>
+								</dl>
+							</div>
+						</div>
+
+						<div class="table_area">
+							<table class="tbl_style_04">
+								<caption>환불정보 기타 내역</caption>
+								<colgroup>
+									<col width="180px">
+									<col width="*">
+								</colgroup>
+								<tbody>
+								<tr>
+									<th>환급 쿠폰</th>
+									<td>[사은품] 남성용 플라이워크 후드 자켓 구매시 장우산 증정 (1)</td>
+								</tr>
+								<tr>
+									<th>상품 마일리지</th>
+									<td><span class="line_through mr20">49,126</span>16,331 마일리지 (적립예정)</td>
+								</tr>
+								<tr>
+									<th>환불 마일리지</th>
+									<td>0</td>
+								</tr>
+								<tr>
+									<th>환불 은행</th>
+									<td>무통장 입금 (우리은행 : 5684351001002)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#;" class="btn_st_03">등록/변경</a></td>
+								</tr>
+								</tbody>
+							</table>
+							<p class="list_01_li mt10">사은품 쿠폰 환급시 사은품은 발송되지 않습니다.</p>
+						</div>
+
+						<div class="title_area2">
+							<h4 class="tlt_dpt02">금액별 사은품</h4>
+						</div>
+						<div class="freebie_pick mp">
+							<ul>
+								<li>
+									<div class="item">
+										<p class="thumb"><img src="../images/freebie_thumb_img4.jpg" alt="사은품명 1"></p>
+										<p class="price">45만원 대</p>
+										<p class="name">양말 (1)개</p>
+									</div>
+								</li>
+								<li>
+									<div class="item">
+										<p class="thumb"><img src="../images/freebie_thumb_img5.jpg" alt="사은품명 1"></p>
+										<p class="price">45만원 대</p>
+										<p class="name">양말 (1)개</p>
+									</div>
+								</li>
+								<li>
+									<div class="item">
+										<p class="thumb"><img src="../images/freebie_thumb_img4.jpg" alt="사은품명 1"></p>
+										<p class="price">45만원 대</p>
+										<p class="name">마일리지 1500점 (3)개</p>
+									</div>
+								</li>
+								<li>
+									<div class="item">
+										<p class="thumb"><img src="../images/freebie_thumb_img5.jpg" alt="사은품명 1"></p>
+										<p class="price">45만원 대</p>
+										<p class="name">양말 (1)개</p>
+									</div>
+								</li>
+								<li>
+									<div class="item">
+										<p class="thumb"><img src="../images/freebie_thumb_img5.jpg" alt="사은품명 1"></p>
+										<p class="price">45만원 대</p>
+										<p class="name">양말 (1)개</p>
+									</div>
+								</li>
+							</ul>
+							<p class="list_01_li mt10">사은품 가격이 최종 주문가격 대와 맞지 않으면 다시 신청을 하여야 합니다.</p>
+						</div>
+
+						<div class="title_area2">
+							<h4 class="tlt_dpt02">신청사유</h4>
+							<p class="required_msg sub_info"><em class="ico_req">필수입력</em>표시는 반드시 입력해야 하는 항목입니다.</p>
+						</div>
+
+						<div class="table_area brd_st_05">
+							<table class="tbl_style_02">
+								<caption>신청사유 입력항목</caption>
+								<colgroup>
+									<col width="130px">
+									<col width="*">
+								</colgroup>
+								<tbody>
+								<tr>
+									<th>신청사유<em class="ico_req">필수입력</em></th>
+									<td>
+										<p class="guide_txt st02">
+											<em class="msg">귀책대상 : 고객 </em>
+										</p>
+										<select name="" style="width: 370px;">
+											<option value="">신청사유를 선택하세요.</option>
+										</select>
+										<textarea name="" id="" cols="30" rows="10" placeholder="상세사유를 입력해 주세요." style="margin-top: 10px;width: 730px;height: 130px;"></textarea>
+									</td>
+								</tr>
+								</tbody>
+							</table>
+						</div>
+
+
+						<div class="btn_area">
+							<button type="button" class="btn_st_01 js-dialog" data-href="./popup/FO-Mypage-0070.html">주문취소</button>
+							<!--<button type="button" class="btn_st_01 js-dialog" data-href="./popup/FO-Mypage-0080.html">주문취소</button> -->
+							<!--
+								최종 결제할 금액이 15만원이상인 경우 뜨는 팝업 - FO-Mypage-0070.html
+								최종 결제할 금액이 15만원이하인 경우 뜨는 팝업 - FO-Mypage-0080.html
+							-->
+							<button type="button" class="btn_st_01 bg_gray">목록</button>
+						</div>
+
+						<ul class="list_01 mt40">
+							<li>카드결제는 카드사로 즉시 취소 요청됩니다. (약 5~7일 이내에 카드사를 통해 확인 가능합니다.)</li>
+							<li>일부 카드사는 부분취소가 불가능하므로 취소 신청 후 재 결제 하여야 합니다.</li>
+							<li>실시간 계좌이체는 결제를 진행하신 계좌로 환불처리 됩니다.</li>
+							<li>무통장 입금을 하신 경우 환불계좌로 2~3일내 입금처리 됩니다. (환불계좌는 마이페이지 > 회원정보 변경에서 등록하실 수 있습니다.) </li>
+							<li>적용된 쿠폰 및 마일리지는 전체 상품 취소시 반환됩니다.</li>
+						</ul>
+
+					</div>
+				</div>
+			</div>
+			<!-- //ui-contents -->
+		</div>
+		<!-- //ui-container -->
+
+		<!-- Include Footer -->
+		<script type="text/javascript">gf.inc.foot()</script>
+	</div>
+</body>
+</html>

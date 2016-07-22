@@ -1,0 +1,61 @@
+<!-- layer -->
+<div class="dialog-cont" title="상품 리뷰 작성" style="width:600px;">
+	<div class="brd_st_04">
+		<p class="required_msg st02"><em class="ico_req">필수입력</em>표시는 반드시 입력해야 하는 항목입니다.</p>
+		<div class="table_area brd_st_05 mt20">
+			<table class="tbl_style_02">
+				<caption>상품 리뷰 작성 입력항목</caption>
+				<colgroup>
+					<col width="130px">
+					<col width="*">
+				</colgroup>
+				<tbody>
+				<tr>
+					<th>별점</th>
+					<td>
+						<div class="opt-select rating">
+							<a href="javascript:;"><span class="star-rating"><span style="width:100%"></span></span></a>
+							<div>
+								<ul class="opt-rating">
+									<!-- 활성화 된 li에 class="active" -->
+									<li class="active"><span class="star-rating"><span style="width:100%"></span></span></li>
+									<li><span class="star-rating"><span style="width:80%"></span></span></li>
+									<li><span class="star-rating"><span style="width:60%"></span></span></li>
+									<li><span class="star-rating"><span style="width:40%"></span></span></li>
+									<li><span class="star-rating"><span style="width:20%"></span></span></li>
+								</ul>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th>제목<em class="ico_req">필수입력</em></th>
+					<td><input type="text" class="w_st02" title="가운데 번호 입력"></td>
+				</tr>
+				<tr>
+					<th>내용<em class="ico_req">필수입력</em></th>
+					<td>
+						<textarea name="" id="" cols="30" rows="10" placeholder="20자 이상 등록해 주십시오." style="width: 440px;height: 100px;"></textarea>
+					</td>
+				</tr>
+				<tr>
+					<th>이미지</th>
+					<td>
+						<div class="input-file">
+							<input type="text" readonly="readonly" class="file-name" />
+							<label for="upload02" class="btn_st_03 file-label">찾아보기</label>
+							<input type="file" name="" id="upload02" class="file-upload" />
+						</div>
+					</td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	<div class="btn_area">
+		<button class="btn_st_02" type="button" onclick="closeDialog()">확인</button>
+		<button class="btn_st_02 bg_gray" type="button" onclick="closeDialog()">취소</button>
+	</div>
+</div>
+<!-- //layer -->

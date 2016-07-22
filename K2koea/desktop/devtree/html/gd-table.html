@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="pragma" content="no-cache"/>
+    <meta http-equiv="Cache-Control" content="No-Cache"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=1, target-densitydpi=medium-dpi" />
+    <title> Table | K2 </title>
+
+    <!-- ie8 미디어쿼리 사용하기위해 스크립트보다 상위에 위치 -->
+    <link rel="stylesheet" type="text/css" href="../../theme-k2/css/reset.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="../../theme-k2/css/k2-ui.css" media="all" />
+
+    <script type="text/javascript" src="../../theme-k2/js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="../../theme-k2/js/k2-ui.js"></script>
+
+</head>
+<body>
+<div id="page">
+
+    <!-- ui-content -->
+    <div id="content">
+        <div class="ui-contents clearfix">
+        	
+        	<div class="title_area">
+				<h3 class="tlt_dpt01">Table type1 - 장바구니(tbl_style_03)</h3>
+			</div>
+            <div class="table_area">
+                <table class="tbl_style_03">
+                    <caption>장바구니 목록</caption>
+                    <colgroup>
+                        <col width="62px">
+                        <col width="528px">
+                        <col width="150px">
+                        <col width="120px">
+                        <col width="120px">
+                        <col width="*">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th>
+                            <div class="chkRd_box no_label">
+                                <input type="checkbox" id="chk01" />
+                                <label for="chk01">전체선택</label>
+                            </div>
+                        </th>
+                        <th>상품정보</th>
+                        <th>수량</th>
+                        <th>상품가격</th>
+                        <th>마일리지</th>
+                        <th>주문/삭제</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <div class="chkRd_box no_label">
+                                <input type="checkbox" id="chk01_1" />
+                                <label for="chk01_1">선택</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="cart_prd">
+                                <a href="#" class="thumb_img">
+                                    <img src="../images/cart_thumb_img.jpg" alt="제품명">
+                                    <span class="deal">K-DEAL</span>
+                                </a>
+                                <div class="prd_info">
+                                    <p class="evt_txt">이벤트 특가상품</p>
+                                    <p class="prd_name"><a href="#">남성용 플라이워크 후드 자켓</a><span class="sold_out">[품절]</span></p>
+                                    <p class="prd_opt">
+                                        <span class="opt">색상 : <span>그레이</span></span>
+                                        <span class="opt">사이즈 : <span>100</span></span>
+                                    </p>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="qty_area">
+                                <button class="btn_minus">수량 빼기</button>
+                                <input type="text" id="txtqty" value="1" title="수량">
+                                <button class="btn_plus">수량 더하기</button>
+                            </div>
+                            <button class="btn_st_04 bg_gray">변경</button>
+                        </td>
+                        <td><span class="cart_num price font-en">48,000 <span class="prc_mark">W</span></span></td>
+                        <td><span class="cart_num mileage font-en">48,000 <span class="prc_mark">M</span></span></td>
+                        <td>
+                            <div class="cart_btn_area">
+                                <button class="btn_st_04">주문</button>
+                                <button class="btn_st_04 bg_gray">삭제</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="chkRd_box no_label">
+                                <input type="checkbox" id="chk01_2" />
+                                <label for="chk01_2">선택</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="cart_prd">
+                                <a href="#" class="thumb_img">
+                                    <img src="../images/cart_thumb_img.jpg" alt="제품명">
+                                    <span class="deal">K-DEAL</span>
+                                </a>
+                                <div class="prd_info">
+                                    <p class="evt_txt">이벤트 특가상품</p>
+                                    <p class="prd_name"><a href="#">남성용 플라이워크 후드 자켓</a><span class="sold_out">[품절]</span></p>
+                                    <p class="prd_opt">
+                                        <span class="opt">색상 : <span>그레이</span></span>
+                                        <span class="opt">사이즈 : <span>100</span></span>
+                                    </p>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="qty_area">
+                                <button class="btn_minus">수량 빼기</button>
+                                <input type="text" id="txtqty" value="1" title="수량">
+                                <button class="btn_plus">수량 더하기</button>
+                            </div>
+                            <button class="btn_st_04 bg_gray">변경</button>
+                        </td>
+                        <td><span class="cart_num price font_en">48,000 <span class="prc_mark">W</span></span></td>
+                        <td><span class="cart_num mileage font_en">48,000 <span class="prc_mark">M</span></span></td>
+                        <td>
+                            <div class="cart_btn_area">
+                                <button class="btn_st_04">주문</button>
+                                <button class="btn_st_04 bg_gray">삭제</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="chkRd_box no_label">
+                                <input type="checkbox" id="chk01_3" />
+                                <label for="chk01_3">선택</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="cart_prd">
+                                <a href="#" class="thumb_img">
+                                    <img src="../images/cart_thumb_img.jpg" alt="제품명">
+                                    <span class="deal">K-DEAL</span>
+                                </a>
+                                <div class="prd_info">
+                                    <p class="evt_txt">이벤트 특가상품</p>
+                                    <p class="prd_name"><a href="#">남성용 플라이워크 후드 자켓</a><span class="sold_out">[품절]</span></p>
+                                    <p class="prd_opt">
+                                        <span class="opt">색상 : <span>그레이</span></span>
+                                        <span class="opt">사이즈 : <span>100</span></span>
+                                    </p>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="qty_area">
+                                <button class="btn_minus">수량 빼기</button>
+                                <input type="text" id="txtqty" value="1" title="수량">
+                                <button class="btn_plus">수량 더하기</button>
+                            </div>
+                            <button class="btn_st_04 bg_gray">변경</button>
+                        </td>
+                        <td><span class="cart_num price font_en">48,000 <span class="prc_mark">W</span></span></td>
+                        <td><span class="cart_num mileage font_en">48,000 <span class="prc_mark">M</span></span></td>
+                        <td>
+                            <div class="cart_btn_area">
+                                <button class="btn_st_04">주문</button>
+                                <button class="btn_st_04 bg_gray">삭제</button>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <hr style="display: block;margin:50px 0">
+
+            <div class="title_area">
+                <h3 class="tlt_dpt01">Table type1 - 장바구니(tbl_style_03) - 상품없을때</h3>
+            </div>
+            <div class="table_area">
+                <table class="tbl_style_03">
+                    <caption>장바구니 목록</caption>
+                    <colgroup>
+                        <col width="62px">
+                        <col width="528px">
+                        <col width="150px">
+                        <col width="120px">
+                        <col width="120px">
+                        <col width="*">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th>
+                            <div class="chkRd_box no_label">
+                                <input type="checkbox" id="chk01" />
+                                <label for="chk01">전체선택</label>
+                            </div>
+                        </th>
+                        <th>상품정보</th>
+                        <th>수량</th>
+                        <th>상품가격</th>
+                        <th>마일리지</th>
+                        <th>삭제</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <!-- td에 클래스 추가 -->
+                        <td colspan="6" class="cart_no_item">
+                            <p>장바구니에 담은 상품이 없습니다.</p>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <hr style="display: block;margin: 50px 0;">
+
+            <div class="title_area2">
+                <h3 class="tlt_dpt02">배송지 정보 - .tbl_style_04</h3>
+            </div>
+            <div class="table_area">
+                <table class="tbl_style_04">
+                    <caption>배송지 정보</caption>
+                    <colgroup>
+                        <col width="180px">
+                        <col width="370px">
+                        <col width="180px">
+                        <col width="*">
+                    </colgroup>
+                    <tbody>
+                    <tr>
+                        <th>받는분</th>
+                        <td colspan="3">홍길동</td>
+                    </tr>
+                    <tr>
+                        <th>주소</th>
+                        <td colspan="3">(12345)서울특별시 강남구 역삼동 1가 123457</td>
+                    </tr>
+                    <tr>
+                        <th>휴대폰</th>
+                        <td>010-0000-0000</td>
+                        <th>전화번호</th>
+                        <td>000-0000-0000</td>
+                    </tr>
+                    <tr>
+                        <th>배송메모</th>
+                        <td colspan="3">현관문앞에 놔주세요.</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+            <div class="title_area2">
+                <h3 class="tlt_dpt02">Table - .tbl_style_05</h3>
+            </div>
+            <div class="table_area mt10">
+                <table class="tbl_style_05 fz14">
+                    <caption>구매내역 목록</caption>
+                    <colgroup>
+                        <col width="118px">
+                        <col width="129px">
+                        <col width="109px">
+                        <col width="169px">
+                        <col width="109px">
+                        <col width="109px">
+                        <col width="109px">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th rowspan="2">구매일</th>
+                        <th>구매매장</th>
+                        <th>품번</th>
+                        <th>상품명</th>
+                        <th>칼라</th>
+                        <th>사이즈</th>
+                        <th>수량</th>
+                    </tr>
+                    <tr>
+                        <th>영수증번호</th>
+                        <th>소비자가</th>
+                        <th>결제금액</th>
+                        <th>발생 마일리지</th>
+                        <th>프로모션</th>
+                        <th>결제합계</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td rowspan="2">0000-00-00</td>
+                        <td><p class="w_st01 ellipsis">천안(복합)점천안(복합)점</p></td>
+                        <td>KWU15112</td>
+                        <td><p class="w_st02 ellipsis">EXM 아쿠아벤트 자켓EXM 아쿠아벤트 자켓</p></td>
+                        <td>K7</td>
+                        <td>95</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>3740201510111</td>
+                        <td>KWU15112</td>
+                        <td>189,000 w</td>
+                        <td>9,450M</td>
+                        <td><p class="w_st03 ellipsis">Thankyo</p></td>
+                        <td>189,000 w</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="title_area2">
+                <h3 class="tlt_dpt02">Table - .tbl_style_06</h3>
+            </div>
+            <div class="table_area">
+                <table class="tbl_style_06 brd">
+                    <caption>수선범위 안내</caption>
+                    <colgroup>
+                        <col width="180px">
+                        <col width="*">
+                        <col width="205px">
+                        <col width="160px">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th>구분</th>
+                        <th>수선 가능 범위</th>
+                        <th>비고</th>
+                        <th class="brd_r_n">유/무상 여부</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th rowspan="4">등산화</th>
+                        <td class="al">창갈이</td>
+                        <td></td>
+                        <td class="brd_r_n">유상</td>
+                    </tr>
+                    <tr>
+                        <td class="al">접착/고리수선/재봉수선/가죽 및 원단 파손</td>
+                        <td></td>
+                        <td rowspan="3" class="brd_r_n">유무상</td>
+                    </tr>
+                    <tr>
+                        <td class="al">패트수리 및 원단 파손</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="al">제골 수선 (발볼넓힘)</td>
+                        <td></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+            <div class="title_area2">
+                <h3 class="tlt_dpt02">Table - .tbl_style_07</h3>
+            </div>
+            <div class="table_area">
+                <table class="tbl_style_07">
+                    <caption>자주 묻는 질문 리스트</caption>
+                    <colgroup>
+                        <col width="80px">
+                        <col width="*">
+                        <col width="150px">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th>번호</th>
+                        <th>제목</th>
+                        <th>등록일</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="noti_item">
+                        <td>공지</td>
+                        <td class="al">
+                            <a href="#">랜덤발송 조건의 사은품을 원하는 상품으로 지정할 수 있나요?</a>
+                        </td>
+                        <td>0000-00-00</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td class="al">
+                            <a href="#">랜덤발송 조건의 사은품을 원하는 상품으로 지정할 수 있나요?</a>
+                        </td>
+                        <td>0000-00-00</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td class="al">
+                            <a href="#">랜덤발송 조건의 사은품을 원하는 상품으로 지정할 수 있나요?</a>
+                        </td>
+                        <td>0000-00-00</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td class="al">
+                            <a href="#">랜덤발송 조건의 사은품을 원하는 상품으로 지정할 수 있나요?</a>
+                        </td>
+                        <td>0000-00-00</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- //ui-content -->
+
+
+
+
+</div>
+
+</body>
+</html>
