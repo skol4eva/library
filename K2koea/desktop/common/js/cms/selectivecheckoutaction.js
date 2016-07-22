@@ -1,5 +1,0 @@
-/**
- * 
- */
-ACC.selectivecheckout = {
-}
